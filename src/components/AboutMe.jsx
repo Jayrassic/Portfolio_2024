@@ -13,16 +13,16 @@ const AboutMe = () => {
   return (
     <motion.div
       ref={divRef}
-      className="p-8 overflow-y-scroll max-h-screen snap-start focus:bg-pink-400"
+      className="max-h-screen snap-start overflow-y-scroll p-8 focus:bg-pink-400"
       initial={{ opacity: 0, x: 500 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ type: "tween", delay: 0.2, duration: 0.5 }}
       viewport={{ amount: 0.1 }}
     >
-      <h2 className="text-center text-4xl border-black border-2 border-solid rounded-md font-serif">
+      <h2 className="rounded-md border-2 border-solid border-black p-2 text-center font-serif text-4xl">
         About me
       </h2>
-      <div className="text-base font-mono mx-12 mt-8">
+      <div className="mx-12 mt-8 font-mono text-base">
         <p className="py-2 ">
           I’ve always had a passion for building things. It started with a
           curiosity of how things work and eventually led into a career in
