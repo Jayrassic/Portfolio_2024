@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import AboutMe from "./components/AboutMe";
-import PersonalProjects from "./components/PersonalProjects";
-import ClientProjects from "./components/ClientProjects";
+import AboutMe from "./views/AboutMe";
+import PersonalProjects from "./views/PersonalProjects";
+import ClientProjects from "./views/ClientProjects";
 import Links from "./components/Links";
 
 function App() {
