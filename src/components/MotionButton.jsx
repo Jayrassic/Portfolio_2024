@@ -4,9 +4,17 @@ import PropTypes from "prop-types";
 const MotionButton = ({ text, svg }) => {
   return (
     <motion.button
-      className="flex justify-center rounded-lg bg-blue-200 p-4 shadow-md"
-      whileHover={{ scale: 1.2 }}
-      whileTap={{ scale: 0.9 }}
+      className="flex justify-center bg-blue-200 p-4 shadow-md"
+      whileHover={{
+        scale: 1.2,
+        borderRadius: ".5rem",
+        boxShadow:
+          " 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+      }}
+      whileTap={{
+        scale: 0.9,
+        boxShadow: "inset 0 2px 4px 0 rgb(0 0 0 / 0.05)",
+      }}
     >
       {text}
       <img className="inline px-2" src={svg} alt="email icon" />
