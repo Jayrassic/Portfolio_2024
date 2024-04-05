@@ -15,19 +15,29 @@ const PersonalProjects = () => {
   }, [isInView]);
 
   return (
-    <motion.div
+    <div
       ref={divRef}
       className="flex max-h-screen min-h-screen snap-start flex-col overflow-y-scroll p-8"
-      initial={{ opacity: 0, x: 500 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ type: "tween", delay: 0.2, duration: 0.5 }}
-      viewport={{ amount: 0.1 }}
     >
-      <h2 className="mb-8 rounded-md border-2 border-solid border-black p-2 text-center font-serif text-4xl">
-        Personal Projects
-      </h2>
+      <motion.div
+        initial={{ opacity: 0, x: 500 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ type: "tween", delay: 0.2, duration: 0.5 }}
+        viewport={{ amount: 0.1 }}
+        exit={{ opacity: 0, x: 500 }}
+      >
+        <h2 className="mb-8 rounded-md border-2 border-solid border-black p-2 text-center font-serif text-4xl">
+          Personal Projects
+        </h2>
+      </motion.div>
 
-      <div className="m-auto flex flex-wrap justify-center gap-8">
+      <motion.div
+        className="m-auto flex flex-wrap justify-center gap-8"
+        initial={{ opacity: 0, x: -500 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ type: "tween", delay: 0.2, duration: 0.5 }}
+        viewport={{ amount: 0.1 }}
+      >
         <ProjectCard
           title="BoardBuddies-Frontend"
           projectScreenshot="src/assets/images/BoardBuddies.png"
@@ -52,8 +62,8 @@ const PersonalProjects = () => {
           siteLink="https://palletcounter.netlify.app/ "
           githubLink="https://github.com/Jayrassic/react_pallet_counter"
         />
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 };
 

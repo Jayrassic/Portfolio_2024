@@ -11,18 +11,28 @@ const AboutMe = () => {
   }, [isInView]);
 
   return (
-    <motion.div
+    <div
       ref={divRef}
       className="max-h-screen min-h-screen snap-start overflow-y-scroll p-8"
-      initial={{ opacity: 0, x: 500 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ type: "tween", delay: 0.2, duration: 0.5 }}
-      viewport={{ amount: 0.1 }}
     >
-      <h2 className="rounded-md border-2 border-solid border-black p-2 text-center font-serif text-4xl">
-        About me
-      </h2>
-      <div className="mx-12 mt-8 font-mono text-base">
+      <motion.div
+        initial={{ opacity: 0, x: 500 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ type: "tween", delay: 0.2, duration: 0.5 }}
+        viewport={{ amount: 0.1 }}
+      >
+        <h2 className="rounded-md border-2 border-solid border-black p-2 text-center font-serif text-4xl">
+          About me
+        </h2>
+      </motion.div>
+
+      <motion.div
+        className="mx-12 mt-8 font-mono text-base"
+        initial={{ opacity: 0, x: -500 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ type: "tween", delay: 0.2, duration: 0.5 }}
+        viewport={{ amount: 0.1 }}
+      >
         <p className="py-2 ">
           I’ve always had a passion for building things. It started with a
           curiosity of how things work and eventually led into a career in
@@ -66,8 +76,8 @@ const AboutMe = () => {
           phase of my career. I am excited to find new ways to learn and grow in
           this field.{" "}
         </p>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 };
 

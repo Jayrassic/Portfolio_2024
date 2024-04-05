@@ -13,10 +13,11 @@ const Contact = () => {
     divRef.current.scroll(top);
   }, [isInView]);
   return (
-    <div className="flex max-h-screen min-h-screen snap-start flex-col overflow-y-scroll p-8">
+    <div
+      ref={divRef}
+      className="flex max-h-screen min-h-screen snap-start flex-col overflow-y-scroll p-8"
+    >
       <motion.div
-        ref={divRef}
-        // className="flex min-h-screen snap-start flex-col overflow-y-scroll p-8"
         initial={{ opacity: 0, x: 500 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ type: "tween", delay: 0.2, duration: 0.5 }}
@@ -27,15 +28,12 @@ const Contact = () => {
         </h2>
       </motion.div>
       <motion.div
-        ref={divRef}
         className="m-auto flex flex-col items-center gap-12 font-mono"
-        // className="flex min-h-screen snap-start flex-col overflow-y-scroll p-8"
         initial={{ opacity: 0, x: -500 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ type: "tween", delay: 0.2, duration: 0.5 }}
         viewport={{ amount: 0.1 }}
       >
-        {/* <div className="m-auto flex flex-col items-center gap-12 font-mono"> */}
         <h3 className="text-xl">Looking for a Full-Stack web developer?</h3>
         <div>
           <MotionButton text="Email Me" svg={emailSVG} />
