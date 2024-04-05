@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import AboutMe from "./views/AboutMe";
 import PersonalProjects from "./views/PersonalProjects";
 import ClientProjects from "./views/ClientProjects";
-import Links from "./components/Links";
+import Contact from "./views/Contact";
 
 function App() {
   function scrollHandler(e) {
@@ -41,12 +41,7 @@ function App() {
             </a>
           </li>
           <li>
-            <a className="text-xl" href="#links">
-              Resume + Github
-            </a>
-          </li>
-          <li>
-            <a className="text-xl" href="#">
+            <a className="text-xl" href="#contact">
               Contact
             </a>
           </li>
@@ -67,8 +62,8 @@ function App() {
         <div id="client" className=" h-screen snap-start snap-always">
           <ClientProjects />
         </div>
-        <div id="links" className=" h-screen snap-start snap-always">
-          <Links />
+        <div id="contact" className=" h-screen snap-start snap-always">
+          <Contact />
         </div>
       </div>
     </div>
