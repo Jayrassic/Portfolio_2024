@@ -1,28 +1,16 @@
-import { IconContext } from "react-icons";
-import { SiMongodb, SiExpress, SiJsonwebtokens } from "react-icons/si";
-import { FaNodeJs } from "react-icons/fa";
+import mongoSVG from "../assets/SVG/mongodb.svg";
+import expressSVG from "../assets/SVG/express.svg";
+import JWTSVG from "../assets/SVG/JWT.svg";
+import nodeSVG from "../assets/SVG/node.svg";
 
 const BBBackTechSVGs = () => {
   return (
     <div className="flex justify-center gap-4">
       <p className="">Tech:</p>
-
-      <IconContext.Provider
-        value={{ className: "fill-green-300", size: "1.5rem" }}
-      >
-        <SiMongodb />
-      </IconContext.Provider>
-      <IconContext.Provider
-        value={{ className: "fill-green-500", size: "1.5rem" }}
-      >
-        <FaNodeJs />
-      </IconContext.Provider>
-      <IconContext.Provider value={{ size: "1.5rem" }}>
-        <SiExpress />
-      </IconContext.Provider>
-      <IconContext.Provider value={{ size: "1.5rem" }}>
-        <SiJsonwebtokens />
-      </IconContext.Provider>
+      <img src={expressSVG} alt="express logo" />
+      <img src={mongoSVG} alt="mongodb logo" />
+      <img src={JWTSVG} alt="JWT logo" />
+      <img src={nodeSVG} alt="node logo" />
     </div>
   );
 };

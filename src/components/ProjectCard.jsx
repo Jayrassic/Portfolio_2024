@@ -1,6 +1,5 @@
-import { IconContext } from "react-icons";
-import { FaGithub } from "react-icons/fa";
-import { CgWebsite } from "react-icons/cg";
+import websiteSVG from "../assets/SVG/website.svg";
+import githubSVG from "../assets/SVG/github.svg";
 import PropTypes from "prop-types";
 
 const ProjectCard = ({
@@ -23,25 +22,22 @@ const ProjectCard = ({
       </a>
       <p className="p-2">{description}</p>
       <div className="p-2 text-lg font-bold">
-        {/* <p className="">Tech:</p> */}
-        <div className="">{SVGComponent}</div>
+        <div>{SVGComponent}</div>
       </div>
-      <IconContext.Provider value={{ size: "1.5rem" }}>
-        <div className="flex items-center justify-center gap-4">
-          <p className="text-lg font-bold">
-            {githubLink && siteLink ? "Links:" : "Link:"}
-          </p>
-          <a href={siteLink} target="_blank">
-            <CgWebsite />
-          </a>
+      <div className="flex items-center justify-center gap-4">
+        <p className="text-lg font-bold">
+          {githubLink && siteLink ? "Links:" : "Link:"}
+        </p>
+        <a href={siteLink} target="_blank">
+          <img src={websiteSVG} alt="website SVG" />
+        </a>
 
-          {githubLink && (
-            <a href={githubLink} target="_blank">
-              <FaGithub />
-            </a>
-          )}
-        </div>
-      </IconContext.Provider>
+        {githubLink && (
+          <a href={githubLink} target="_blank">
+            <img src={githubSVG} alt="github logo" />
+          </a>
+        )}
+      </div>
     </div>
   );
 };

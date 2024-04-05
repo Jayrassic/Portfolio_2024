@@ -1,27 +1,15 @@
-import { IconContext } from "react-icons";
-import { FaReact, FaBootstrap } from "react-icons/fa";
-import { SiTypescript } from "react-icons/si";
+import bootstrapSVG from "../assets/SVG/bootstrap.svg";
+import typescriptSVG from "../assets/SVG/typescript.svg";
+import reactSVG from "../assets/SVG/react.svg";
 
 const BBFrontTechSVGs = () => {
   return (
     <div className="flex justify-center gap-4">
       <p className="">Tech:</p>
 
-      <IconContext.Provider
-        value={{ className: "fill-blue-300", size: "1.5rem" }}
-      >
-        <FaReact />
-      </IconContext.Provider>
-      <IconContext.Provider
-        value={{ className: "fill-violet-500", size: "1.5rem" }}
-      >
-        <FaBootstrap />
-      </IconContext.Provider>
-      <IconContext.Provider
-        value={{ className: "fill-blue-500", size: "1.5rem" }}
-      >
-        <SiTypescript />
-      </IconContext.Provider>
+      <img src={reactSVG} alt="react logo" />
+      <img src={bootstrapSVG} alt="bootstrap logo" />
+      <img src={typescriptSVG} alt="typescript logo" />
     </div>
   );
 };

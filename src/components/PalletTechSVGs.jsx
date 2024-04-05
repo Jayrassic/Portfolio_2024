@@ -1,27 +1,15 @@
-import { IconContext } from "react-icons";
-import { FaReact, FaCss3Alt } from "react-icons/fa";
-import { SiTypescript } from "react-icons/si";
+import typescriptSVG from "../assets/SVG/typescript.svg";
+import reactSVG from "../assets/SVG/react.svg";
+import cssSvg from "../assets/SVG/css-3.svg";
 
 const PalletTechSVGs = () => {
   return (
     <div className="flex justify-center gap-4">
       <p className="">Tech:</p>
 
-      <IconContext.Provider
-        value={{ className: "fill-blue-300", size: "1.5rem" }}
-      >
-        <FaReact />
-      </IconContext.Provider>
-      <IconContext.Provider
-        value={{ className: "fill-blue-500", size: "1.5rem" }}
-      >
-        <SiTypescript />
-      </IconContext.Provider>
-      <IconContext.Provider
-        value={{ className: "fill-red-500", size: "1.5rem" }}
-      >
-        <FaCss3Alt />
-      </IconContext.Provider>
+      <img src={reactSVG} alt="react logo" />
+      <img src={typescriptSVG} alt="typescript logo" />
+      <img src={cssSvg} alt="CSS logo" />
     </div>
   );
 };
