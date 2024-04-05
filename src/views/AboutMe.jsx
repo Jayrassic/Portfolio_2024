@@ -13,7 +13,7 @@ const AboutMe = () => {
   return (
     <motion.div
       ref={divRef}
-      className="max-h-screen snap-start overflow-y-scroll p-8 focus:bg-pink-400"
+      className="max-h-screen min-h-screen snap-start overflow-y-scroll p-8"
       initial={{ opacity: 0, x: 500 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ type: "tween", delay: 0.2, duration: 0.5 }}

@@ -17,7 +17,7 @@ const PersonalProjects = () => {
   return (
     <motion.div
       ref={divRef}
-      className="flex min-h-screen snap-start flex-col overflow-y-scroll p-8"
+      className="flex max-h-screen min-h-screen snap-start flex-col overflow-y-scroll p-8"
       initial={{ opacity: 0, x: 500 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ type: "tween", delay: 0.2, duration: 0.5 }}
