@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 const MotionButton = ({ text, svg }) => {
   return (
     <motion.button
-      className="flex justify-center bg-blue-200 p-4 shadow-md"
+      className="flex justify-center bg-green-400 p-4 shadow-md"
       whileHover={{
-        scale: 1.2,
+        scale: 1.3,
         borderRadius: ".5rem",
         boxShadow:
           " 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
