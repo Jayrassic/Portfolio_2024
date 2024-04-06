@@ -17,7 +17,7 @@ const PersonalProjects = () => {
   return (
     <div
       ref={divRef}
-      className="flex max-h-screen min-h-screen snap-start flex-col overflow-y-scroll p-8"
+      className="no-scrollbar flex max-h-screen min-h-screen snap-start flex-col overflow-x-hidden overflow-y-scroll p-8"
     >
       <motion.div
         initial={{ opacity: 0, x: 500 }}
@@ -40,7 +40,7 @@ const PersonalProjects = () => {
       >
         <ProjectCard
           title="BoardBuddies-Frontend"
-          projectScreenshot="src/assets/images/BoardBuddies.png"
+          projectScreenshot="https://res.cloudinary.com/dkqdyagy6/image/upload/q_auto/f_auto/v1712355403/Boardbuddies_Screenshot_x1frtr.png"
           description="Searchable Board Game Database"
           SVGComponent={<BBFrontTechSVGs />}
           siteLink="https://boardbuddies.netlify.app/ "
@@ -48,7 +48,7 @@ const PersonalProjects = () => {
         />
         <ProjectCard
           title="BoardBuddies-Backend"
-          projectScreenshot="src/assets/images/BoardBuddies.png"
+          projectScreenshot="https://res.cloudinary.com/dkqdyagy6/image/upload/q_auto/f_auto/v1712355403/NodeScreenshot_l1ntww.png"
           description="Routing, Authentication, and Data Management"
           SVGComponent={<BBBackTechSVGs />}
           siteLink="https://boardbuddies.netlify.app/ "
@@ -56,7 +56,7 @@ const PersonalProjects = () => {
         />
         <ProjectCard
           title="Pallet Counter"
-          projectScreenshot="src/assets/images/PalletCounter.png"
+          projectScreenshot="https://res.cloudinary.com/dkqdyagy6/image/upload/q_auto/f_auto/v1712355403/PalletCounterScreenshot_rkhzs0.png"
           description="Pallet Weight Counter"
           SVGComponent={<PalletTechSVGs />}
           siteLink="https://palletcounter.netlify.app/ "

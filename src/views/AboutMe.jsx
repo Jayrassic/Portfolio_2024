@@ -13,7 +13,7 @@ const AboutMe = () => {
   return (
     <div
       ref={divRef}
-      className="max-h-screen min-h-screen snap-start overflow-y-scroll p-8"
+      className="no-scrollbar max-h-screen min-h-screen snap-start overflow-x-hidden overflow-y-scroll p-8"
     >
       <motion.div
         initial={{ opacity: 0, x: 500 }}

@@ -15,7 +15,7 @@ const ClientProjects = () => {
   return (
     <div
       ref={divRef}
-      className="flex max-h-screen min-h-screen snap-start flex-col overflow-y-scroll p-8"
+      className="no-scrollbar flex max-h-screen min-h-screen snap-start flex-col overflow-x-hidden overflow-y-scroll p-8"
     >
       <motion.div
         initial={{ opacity: 0, x: 500 }}
@@ -36,7 +36,7 @@ const ClientProjects = () => {
       >
         <ProjectCard
           title="Autex Auto Haus"
-          projectScreenshot="src/assets/images/AutexSite.png"
+          projectScreenshot="https://res.cloudinary.com/dkqdyagy6/image/upload/q_auto/f_auto/v1712355403/AutexAutoScreenshot_tudchq.png"
           description="Single Page App"
           SVGComponent={<PalletTechSVGs />}
           siteLink="https://autex-autohaus.com/"

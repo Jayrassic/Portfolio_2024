@@ -15,7 +15,7 @@ const Contact = () => {
   return (
     <div
       ref={divRef}
-      className="flex max-h-screen min-h-screen snap-start flex-col overflow-y-scroll p-8"
+      className="no-scrollbar flex max-h-screen min-h-screen snap-start flex-col overflow-x-hidden overflow-y-scroll p-8"
     >
       <motion.div
         initial={{ opacity: 0, x: 500 }}
