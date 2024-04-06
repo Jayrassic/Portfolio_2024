@@ -2,7 +2,12 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        newsreader: ["Newsreader", "serif"],
+        figtree: ["Figtree", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
