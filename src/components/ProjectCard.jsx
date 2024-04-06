@@ -15,13 +15,13 @@ const ProjectCard = ({
       <h3 className="px-4 pb-4 font-serif text-xl font-bold">{title}</h3>
       <a href={siteLink}>
         <img
-          className="max-w-80 rounded-md"
+          className="max-w-80 rounded-md shadow-lg"
           src={projectScreenshot}
           alt="Screenshot of Project"
         />
       </a>
       <p className="p-2">{description}</p>
-      <div className="p-2 text-lg font-bold">
+      <div className="border-t-2 border-black p-2 text-lg font-bold">
         <div>{SVGComponent}</div>
       </div>
       <div className="flex items-center justify-center gap-4">
@@ -29,7 +29,7 @@ const ProjectCard = ({
           {githubLink && siteLink ? "Links:" : "Link:"}
         </p>
         <a href={siteLink} target="_blank">
-          <img src={websiteSVG} alt="website SVG" />
+          <img loading="lazy" src={websiteSVG} alt="website SVG" />
         </a>
 
         {githubLink && (
