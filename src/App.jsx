@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Home from "./views/Home";
 import AboutMe from "./views/AboutMe";
 import PersonalProjects from "./views/PersonalProjects";
 import ClientProjects from "./views/ClientProjects";
@@ -49,10 +50,9 @@ function App() {
       </nav>
 
       <div className="col-span-8 max-h-screen  snap-y snap-mandatory scroll-py-0 overflow-x-hidden overflow-y-scroll">
-        <div
-          id="home"
-          className="min-h-screen snap-start snap-always bg-red-400"
-        ></div>
+        <div id="home" className="min-h-screen snap-start snap-always">
+          <Home />
+        </div>
         <div id="about" className="min-h-screen snap-start snap-always">
           <AboutMe />
         </div>
