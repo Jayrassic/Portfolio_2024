@@ -29,7 +29,7 @@ const PersonalProjects = () => {
       className="no-scrollbar flex max-h-screen min-h-screen snap-start flex-col overflow-x-hidden overflow-y-scroll p-8"
     >
       <motion.div variants={childFromRightVariant}>
-        <h2 className="mb-8 rounded-md border-2 border-solid border-black p-2 text-center font-serif text-4xl">
+        <h2 className="mb-8 rounded-md border-2 border-solid border-black p-2 text-center text-4xl font-bold">
           Personal Projects
         </h2>
       </motion.div>

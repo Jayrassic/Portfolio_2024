@@ -25,13 +25,13 @@ const AboutMe = () => {
       className="no-scrollbar max-h-screen min-h-screen snap-start overflow-x-hidden overflow-y-scroll p-8"
     >
       <motion.div variants={childFromRightVariant}>
-        <h2 className="rounded-md border-2 border-solid border-black p-2 text-center font-serif text-4xl">
+        <h2 className="rounded-md border-2 border-solid border-black p-2 text-center text-4xl font-bold">
           About me
         </h2>
       </motion.div>
 
       <motion.div
-        className="mx-12 mt-8 font-mono text-base"
+        className="font-lg mx-12 mt-8 text-lg"
         variants={childFromLeftVariant}
       >
         <p className="py-2 ">

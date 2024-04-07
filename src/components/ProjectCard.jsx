@@ -11,8 +11,8 @@ const ProjectCard = ({
   githubLink,
 }) => {
   return (
-    <div className="flex h-96 w-96 flex-col items-center justify-center rounded-lg bg-gray-300 p-4 text-center font-mono shadow-xl">
-      <h3 className="px-4 pb-4 font-serif text-xl font-bold">{title}</h3>
+    <div className="font-figtree flex h-96 w-96 flex-col items-center justify-center rounded-lg bg-gray-300 p-4 text-center shadow-xl">
+      <h3 className="px-4 pb-4 text-xl font-bold">{title}</h3>
       <a href={siteLink}>
         <img
           className="max-w-80 rounded-md shadow-lg"
