@@ -2,6 +2,11 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
 import ProjectCard from "../components/ProjectCard";
 import PalletTechSVGs from "../components/PalletTechSVGs";
+import {
+  mainVariant,
+  childFromLeftVariant,
+  childFromRightVariant,
+} from "../helpers/viewVariants";
 
 const ClientProjects = () => {
   const divRef = useRef(null);
@@ -13,26 +18,22 @@ const ClientProjects = () => {
   }, [isInView]);
 
   return (
-    <div
+    <motion.div
+      variants={mainVariant}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.1 }}
       ref={divRef}
       className="no-scrollbar flex max-h-screen min-h-screen snap-start flex-col overflow-x-hidden overflow-y-scroll p-8"
     >
-      <motion.div
-        initial={{ opacity: 0, x: 500 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ type: "tween", delay: 0.2, duration: 0.5 }}
-        viewport={{ amount: 0.1 }}
-      >
+      <motion.div variants={childFromRightVariant}>
         <h2 className="mb-8 rounded-md border-2 border-solid border-black p-2 text-center font-serif text-4xl">
           Client Projects
         </h2>
       </motion.div>
       <motion.div
+        variants={childFromLeftVariant}
         className="m-auto flex flex-wrap justify-center gap-8"
-        initial={{ opacity: 0, x: -500 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ type: "tween", delay: 0.2, duration: 0.5 }}
-        viewport={{ amount: 0.1 }}
       >
         <ProjectCard
           title="Autex Auto Haus"
@@ -42,7 +43,7 @@ const ClientProjects = () => {
           siteLink="https://autex-autohaus.com/"
         />
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 

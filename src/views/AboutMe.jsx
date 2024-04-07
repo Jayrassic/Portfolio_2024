@@ -1,5 +1,10 @@
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
+import {
+  mainVariant,
+  childFromLeftVariant,
+  childFromRightVariant,
+} from "../helpers/viewVariants";
 
 const AboutMe = () => {
   const divRef = useRef(null);
@@ -11,16 +16,15 @@ const AboutMe = () => {
   }, [isInView]);
 
   return (
-    <div
+    <motion.div
+      variants={mainVariant}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.1 }}
       ref={divRef}
       className="no-scrollbar max-h-screen min-h-screen snap-start overflow-x-hidden overflow-y-scroll p-8"
     >
-      <motion.div
-        initial={{ opacity: 0, x: 500 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ type: "tween", delay: 0.2, duration: 0.5 }}
-        viewport={{ amount: 0.1 }}
-      >
+      <motion.div variants={childFromRightVariant}>
         <h2 className="rounded-md border-2 border-solid border-black p-2 text-center font-serif text-4xl">
           About me
         </h2>
@@ -28,10 +32,7 @@ const AboutMe = () => {
 
       <motion.div
         className="mx-12 mt-8 font-mono text-base"
-        initial={{ opacity: 0, x: -500 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ type: "tween", delay: 0.2, duration: 0.5 }}
-        viewport={{ amount: 0.1 }}
+        variants={childFromLeftVariant}
       >
         <p className="py-2 ">
           I’ve always had a passion for building things. It started with a
@@ -77,7 +78,7 @@ const AboutMe = () => {
           this field.{" "}
         </p>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 
