@@ -25,7 +25,7 @@ const AboutMe = () => {
       className="no-scrollbar max-h-screen min-h-screen snap-start overflow-x-hidden overflow-y-scroll p-8"
     >
       <motion.div variants={childFromRightVariant}>
-        <h2 className="rounded-md border-2 border-solid border-black p-2 text-center text-4xl font-bold">
+        <h2 className="rounded-md border-2 border-solid border-black bg-emerald-400 p-2 text-center text-4xl font-bold">
           About me
         </h2>
       </motion.div>

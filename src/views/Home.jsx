@@ -76,7 +76,7 @@ const Home = () => {
       </motion.h1>
       <motion.h1 className="p-2 text-6xl" variants={fromLeftVariant}>
         My name is{" "}
-        <motion.span animate className="text-green-400">
+        <motion.span animate className="text-emerald-400">
           Jason
         </motion.span>
       </motion.h1>
