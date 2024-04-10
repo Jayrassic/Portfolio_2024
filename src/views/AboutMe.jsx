@@ -9,7 +9,7 @@ import {
 const AboutMe = () => {
   const divRef = useRef(null);
 
-  const isInView = useInView(divRef, { margin: "-2px" });
+  const isInView = useInView(divRef, { amount: 0.1 });
 
   useEffect(() => {
     divRef.current.scroll(top);
@@ -22,16 +22,16 @@ const AboutMe = () => {
       whileInView="visible"
       viewport={{ amount: 0.1 }}
       ref={divRef}
-      className="no-scrollbar max-h-screen min-h-screen snap-start overflow-x-hidden overflow-y-scroll p-8"
+      className="no-scrollbar flex h-full flex-col overflow-x-hidden overflow-y-scroll p-4 sm:max-h-screen sm:min-h-screen sm:p-8"
     >
       <motion.div variants={childFromRightVariant}>
-        <h2 className="rounded-md border-2 border-solid border-black bg-emerald-400 p-2 text-center text-4xl font-bold">
+        <h2 className="rounded-md border-2 border-solid border-black bg-emerald-400 p-2 text-center text-3xl font-bold sm:text-4xl">
           About me
         </h2>
       </motion.div>
 
       <motion.div
-        className="font-lg mx-12 mt-8 text-lg"
+        className="font-lg mx-3 mt-4 text-lg sm:mx-12 sm:mt-8"
         variants={childFromLeftVariant}
       >
         <p className="py-2 ">

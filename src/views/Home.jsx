@@ -62,19 +62,19 @@ const fromBottomVariant = {
   },
 };
 
-const Home = () => {
+const Home = ({ test }) => {
   return (
     <motion.div
-      className="no-scrollbar font-figtree flex max-h-screen min-h-screen snap-start flex-col items-center justify-center overflow-x-hidden overflow-y-scroll p-8 font-bold"
+      className={`no-scrollbar font-figtree flex snap-start flex-col content-center items-center justify-center overflow-x-hidden overflow-y-scroll p-4 text-center font-bold text-slate-800 sm:max-h-screen sm:min-h-screen sm:p-8`}
       variants={containerVariant}
       initial="hidden"
       whileInView="visible"
       viewport={{ amount: 0.1 }}
     >
-      <motion.h1 className="items-end p-2 text-6xl" variants={fromTopVariant}>
+      <motion.h1 className="p-2 text-6xl" variants={fromTopVariant}>
         Hello there,
       </motion.h1>
-      <motion.h1 className="p-2 text-6xl" variants={fromLeftVariant}>
+      <motion.h1 className="p-2 text-7xl" variants={fromLeftVariant}>
         My name is{" "}
         <motion.span animate className="text-emerald-400">
           Jason
@@ -87,7 +87,7 @@ const Home = () => {
         Lets build together!
       </motion.p>
       <motion.img
-        className="p-5"
+        className="p-3 sm:p-5"
         variants={fromBottomVariant}
         src={downArrow}
         alt="arrow pointing down"

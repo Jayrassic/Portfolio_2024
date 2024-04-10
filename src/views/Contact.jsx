@@ -12,7 +12,7 @@ import {
 const Contact = () => {
   const divRef = useRef(null);
 
-  const isInView = useInView(divRef, { margin: "-2px" });
+  const isInView = useInView(divRef, { amount: 0.1 });
 
   useEffect(() => {
     divRef.current.scroll(top);
@@ -24,7 +24,7 @@ const Contact = () => {
       whileInView="visible"
       viewport={{ amount: 0.1 }}
       ref={divRef}
-      className="no-scrollbar flex max-h-screen min-h-screen snap-start flex-col overflow-x-hidden overflow-y-scroll p-8"
+      className="no-scrollbar flex h-full snap-start flex-col overflow-x-hidden overflow-y-scroll p-4 sm:max-h-screen sm:min-h-screen sm:p-8"
     >
       <motion.div variants={childFromRightVariant}>
         <h2 className="mb-8 rounded-md border-2 border-solid border-black bg-emerald-400 p-2 text-center text-4xl font-bold">
@@ -33,9 +33,11 @@ const Contact = () => {
       </motion.div>
       <motion.div
         variants={childFromLeftVariant}
-        className="m-auto flex flex-col items-center gap-12"
+        className="flex w-full flex-grow flex-col items-center justify-center gap-12 p-4 text-center text-lg sm:m-auto"
       >
-        <h3 className="text-3xl">Looking for a Full-Stack web developer?</h3>
+        <h3 className=" text-2xl sm:text-3xl">
+          Looking for a Full-Stack web developer?
+        </h3>
         <div>
           <MotionButton text="Email Me" svg={emailSVG} />
         </div>

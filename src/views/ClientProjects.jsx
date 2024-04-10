@@ -11,7 +11,7 @@ import {
 const ClientProjects = () => {
   const divRef = useRef(null);
 
-  const isInView = useInView(divRef, { margin: "-2px" });
+  const isInView = useInView(divRef, { amount: 0.1 });
 
   useEffect(() => {
     divRef.current.scroll(top);
@@ -24,16 +24,16 @@ const ClientProjects = () => {
       whileInView="visible"
       viewport={{ amount: 0.1 }}
       ref={divRef}
-      className="no-scrollbar flex max-h-screen min-h-screen snap-start flex-col overflow-x-hidden overflow-y-scroll p-8"
+      className="no-scrollbar flex h-full snap-start flex-col overflow-x-hidden overflow-y-scroll p-4 sm:max-h-screen sm:min-h-screen sm:p-8"
     >
       <motion.div variants={childFromRightVariant}>
-        <h2 className="mb-8 rounded-md border-2 border-solid border-black bg-emerald-400 p-2 text-center text-4xl font-bold">
+        <h2 className="mb-2 rounded-md border-2 border-solid border-black bg-emerald-400 p-2 text-center text-3xl font-bold sm:mb-8 sm:text-4xl">
           Client Projects
         </h2>
       </motion.div>
       <motion.div
         variants={childFromLeftVariant}
-        className="m-auto flex flex-wrap justify-center gap-8"
+        className="flex flex-grow flex-wrap items-center gap-4 p-4 sm:m-auto sm:justify-center sm:gap-8"
       >
         <ProjectCard
           title="Autex Auto Haus"

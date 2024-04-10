@@ -11,16 +11,16 @@ const ProjectCard = ({
   githubLink,
 }) => {
   return (
-    <div className="font-figtree flex h-96 w-96 flex-col items-center justify-center rounded-lg border-2 border-solid border-black bg-emerald-400  p-4 text-center shadow-xl">
+    <div className="font-figtree flex flex-shrink flex-col items-center justify-center rounded-lg border-2 border-solid border-black bg-emerald-400  p-4 text-center shadow-xl">
       <h3 className="px-4 pb-4 text-xl font-bold">{title}</h3>
       <a href={siteLink}>
         <img
-          className="max-w-80 rounded-md shadow-lg"
+          className="rounded-md border-2 border-solid border-black shadow-lg sm:max-w-96"
           src={projectScreenshot}
           alt="Screenshot of Project"
         />
       </a>
-      <p className="p-2">{description}</p>
+      <p className="p-2 text-lg">{description}</p>
       <div className="border-t-2 border-black p-2 text-lg font-bold">
         <div>{SVGComponent}</div>
       </div>
