@@ -3,11 +3,8 @@ import { useRef, useEffect } from "react";
 import emailSVG from "../assets/SVG/email.svg";
 import downloadSVG from "../assets/SVG/download.svg";
 import MotionButton from "../components/MotionButton";
-import {
-  mainVariant,
-  childFromLeftVariant,
-  childFromRightVariant,
-} from "../helpers/viewVariants";
+import { mainVariant, childFromLeftVariant } from "../helpers/viewVariants";
+import { TitleCardH2 } from "../components/Title Card";
 
 const Contact = () => {
   const divRef = useRef(null);
@@ -26,11 +23,8 @@ const Contact = () => {
       ref={divRef}
       className="no-scrollbar flex h-full snap-start flex-col overflow-x-hidden overflow-y-scroll p-4 sm:max-h-screen sm:min-h-screen sm:p-8"
     >
-      <motion.div variants={childFromRightVariant}>
-        <h2 className="mb-8 rounded-md border-2 border-solid border-black bg-emerald-400 p-2 text-center text-4xl font-bold">
-          Contact
-        </h2>
-      </motion.div>
+      <TitleCardH2 title="Contact" />
+
       <motion.div
         variants={childFromLeftVariant}
         className="flex w-full flex-grow flex-col items-center justify-center gap-12 p-4 text-center text-lg sm:m-auto"

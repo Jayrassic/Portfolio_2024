@@ -1,10 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
-import {
-  mainVariant,
-  childFromLeftVariant,
-  childFromRightVariant,
-} from "../helpers/viewVariants";
+import { mainVariant, childFromLeftVariant } from "../helpers/viewVariants";
+import { TitleCardH2 } from "../components/Title Card";
 
 const AboutMe = () => {
   const divRef = useRef(null);
@@ -24,11 +21,7 @@ const AboutMe = () => {
       ref={divRef}
       className="no-scrollbar flex h-full flex-col overflow-x-hidden overflow-y-scroll p-4 sm:max-h-screen sm:min-h-screen sm:p-8"
     >
-      <motion.div variants={childFromRightVariant}>
-        <h2 className="rounded-md border-2 border-solid border-black bg-emerald-400 p-2 text-center text-3xl font-bold sm:text-4xl">
-          About me
-        </h2>
-      </motion.div>
+      <TitleCardH2 title="About Me" />
 
       <motion.div
         className="font-lg mx-3 mt-4 text-lg sm:mx-12 sm:mt-8"

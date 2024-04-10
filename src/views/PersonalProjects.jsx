@@ -6,11 +6,8 @@ import {
   BBFrontTechSVGs,
   PalletTechSVGs,
 } from "../components/CardSVGs";
-import {
-  mainVariant,
-  childFromLeftVariant,
-  childFromRightVariant,
-} from "../helpers/viewVariants";
+import { mainVariant, childFromLeftVariant } from "../helpers/viewVariants";
+import { TitleCardH2 } from "../components/Title Card";
 
 const PersonalProjects = () => {
   const divRef = useRef(null);
@@ -30,11 +27,7 @@ const PersonalProjects = () => {
       ref={divRef}
       className="no-scrollbar flex h-full flex-col overflow-x-hidden overflow-y-scroll p-4 sm:max-h-screen sm:min-h-screen sm:p-8"
     >
-      <motion.div variants={childFromRightVariant}>
-        <h2 className="mb-2 rounded-md border-2 border-solid border-black bg-emerald-400 p-2 text-center text-3xl font-bold sm:mb-8 sm:text-4xl">
-          Personal Projects
-        </h2>
-      </motion.div>
+      <TitleCardH2 title="Personal Projects" />
 
       <motion.div
         variants={childFromLeftVariant}
