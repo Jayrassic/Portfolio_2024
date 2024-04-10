@@ -4,6 +4,8 @@ import githubSVG from "../assets/SVG/github.svg";
 import emailSVG from "../assets/SVG/email.svg";
 
 const Nav = ({ viewObject }) => {
+  const { home, about, skills, personal, client, contact } = viewObject;
+
   function scrollHandler(e) {
     e.preventDefault();
     const target = e.target;
@@ -13,8 +15,6 @@ const Nav = ({ viewObject }) => {
       behavior: "smooth",
     });
   }
-
-  const { home, about, skills, personal, client, contact } = viewObject;
 
   return (
     <nav
@@ -79,6 +79,7 @@ const Nav = ({ viewObject }) => {
       <div className="hidden justify-evenly sm:flex">
         <a href="#">
           <motion.img
+            width="35px"
             whileHover={{ x: 4, scale: 1.12 }}
             src={githubSVG}
             alt="github logo"
@@ -86,6 +87,7 @@ const Nav = ({ viewObject }) => {
         </a>
         <a href="#">
           <motion.img
+            width="35px"
             whileHover={{ x: 4, scale: 1.12 }}
             src={emailSVG}
             alt="mail envelop"
