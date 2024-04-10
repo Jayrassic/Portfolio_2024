@@ -1,9 +1,11 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
 import ProjectCard from "../components/ProjectCard";
-import BBFrontTechSVGs from "../components/BBFrontTechSVGs";
-import BBBackTechSVGs from "../components/BBBackTechSVGs";
-import PalletTechSVGs from "../components/PalletTechSVGs";
+import {
+  BBBackTechSVGs,
+  BBFrontTechSVGs,
+  PalletTechSVGs,
+} from "../components/CardSVGs";
 import {
   mainVariant,
   childFromLeftVariant,

@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
 import ProjectCard from "../components/ProjectCard";
-import PalletTechSVGs from "../components/PalletTechSVGs";
+import { AutexTechSVGs } from "../components/CardSVGs";
 import {
   mainVariant,
   childFromLeftVariant,
@@ -39,7 +39,7 @@ const ClientProjects = () => {
           title="Autex Auto Haus"
           projectScreenshot="https://res.cloudinary.com/dkqdyagy6/image/upload/q_auto/f_auto/v1712355403/AutexAutoScreenshot_tudchq.png"
           description="Single Page App"
-          SVGComponent={<PalletTechSVGs />}
+          SVGComponent={<AutexTechSVGs />}
           siteLink="https://autex-autohaus.com/"
         />
       </motion.div>
