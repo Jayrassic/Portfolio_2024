@@ -65,7 +65,7 @@ const fromBottomVariant = {
 const Home = ({ test }) => {
   return (
     <motion.div
-      className={`no-scrollbar font-figtree flex snap-start flex-col content-center items-center justify-center overflow-x-hidden overflow-y-scroll p-4 text-center font-bold text-slate-800 sm:max-h-screen sm:min-h-screen sm:p-8`}
+      className={`no-scrollbar flex snap-start flex-col content-center items-center justify-center overflow-x-hidden overflow-y-scroll p-4 text-center font-figtree font-bold text-slate-800 sm:max-h-screen sm:min-h-screen sm:p-8`}
       variants={containerVariant}
       initial="hidden"
       whileInView="visible"
@@ -81,7 +81,7 @@ const Home = ({ test }) => {
         </motion.span>
       </motion.h1>
       <motion.p className="p-2 text-xl" variants={fromRightVariant}>
-        I'm a Full stack web developer.
+        I'm a Fullstack web developer.
       </motion.p>
       <motion.p className="p-2 text-xl" variants={fromLeftVariant}>
         Lets build together!
