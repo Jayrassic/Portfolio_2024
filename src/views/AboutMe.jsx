@@ -33,12 +33,13 @@ const AboutMe = () => {
           manufacturing and now web development.
         </p>
         <p className="py-2 ">
-          I studied mechanical engineering at Polytech, but when my family
-          needed help running their automotive parts manufacturing company, I
-          transitioned into that industry; starting out as an assembler,
-          eventually moving to shop manager, and then fully owning and operating
-          the company. At Autex, we designed and manufactured parts for buses
-          and sold them throughout North America.{" "}
+          I studied mechanical engineering at NYU Tandon School of Engineering
+          (formerly Polytechnic University), but when my family needed help
+          running their automotive parts manufacturing company, I transitioned
+          into that industry; starting out as an assembler, eventually moving to
+          shop manager, and then fully owning and operating the company. At my
+          previous company, we designed and manufactured parts for buses and
+          sold them throughout North America.{" "}
         </p>
         <p className="py-2 ">
           During my time as the President and CEO, I had many tasks. I was
@@ -54,21 +55,24 @@ const AboutMe = () => {
           As much as I loved doing what I was doing, eventually the industry
           changed from making products locally to sending designs offshore. The
           industry was also becoming less receptive to new designs and instead
-          wanted carbon copies of the same few products. For these reasons, I
-          did not see room to be able to continue to grow in this business.
-          Because of the hardwork and investment I had put into the company we
-          found ourselves in the fortunate position of receiving buyout offers.
-          We were bought out and I was free to transition to a new field that
-          would allow me to continue to explore my passion for building
-          products.
+          wanted carbon copies of the same few products. For these reasons, my
+          emotional investment in the company was waning. Because of the hard
+          work and investment I had put into the company we found ourselves in
+          the fortunate position of receiving buyout offers. We were bought out
+          and I was free to transition to a new field that would allow me to
+          continue to explore my passion for building products.
         </p>
         <p className="py-2 ">
           After the sale of the company, I thought about the many opportunities
           that were available to me and I ultimately decided on learning web
-          development and programming. I partook in The Odin Project and learned
-          a ton of valuable skills that will propel me forward into the next
-          phase of my career. I am excited to find new ways to learn and grow in
-          this field.{" "}
+          development and programming. As someone who spent a lot of time
+          reading, researching and playing video games on the internet, I was
+          excited learning about the tools and tech that bring it together and
+          thought about making it my career going forward. I partook in The Odin
+          Project and learned a ton of valuable skills that will propel me
+          forward into the next phase of my career. I am excited to find new
+          ways to learn and grow in this field and continue to build new and
+          exiting products.{" "}
         </p>
       </motion.div>
     </motion.div>
