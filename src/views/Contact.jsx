@@ -33,10 +33,14 @@ const Contact = () => {
           Looking for a Full-Stack web developer?
         </h3>
         <div>
-          <MotionButton text="Email Me" svg={emailSVG} />
+          <a href="mailto:jasongaglio@jasongaglio.com">
+            <MotionButton text="Email Me" svg={emailSVG} />
+          </a>
         </div>
         <div>
-          <MotionButton text="Resume" svg={downloadSVG} />
+          <a href="public/Jason-Gaglio-Resume.pdf" target="_blank">
+            <MotionButton text="Resume" svg={downloadSVG} />
+          </a>
         </div>
       </motion.div>
     </motion.div>

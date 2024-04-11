@@ -97,7 +97,7 @@ const Nav = ({ viewObject }) => {
           </motion.li>
         </motion.ul>
         <div className="flex gap-4 px-8 py-2 sm:w-full sm:justify-evenly ">
-          <a href="#">
+          <a href="https://github.com/Jayrassic">
             <motion.img
               width="35px"
               whileHover={{ x: 4, scale: 1.12 }}
@@ -105,7 +105,7 @@ const Nav = ({ viewObject }) => {
               alt="github logo"
             />
           </a>
-          <a href="#">
+          <a href="mailto:jasongaglio@jasongaglio.com">
             <motion.img
               width="35px"
               whileHover={{ x: 4, scale: 1.12 }}
