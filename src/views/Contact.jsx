@@ -5,6 +5,7 @@ import downloadSVG from "../assets/SVG/download.svg";
 import MotionButton from "../components/MotionButton";
 import { mainVariant, childFromLeftVariant } from "../helpers/viewVariants";
 import { TitleCardH2 } from "../components/Title Card";
+import resumePDF from "/public/Jason-Gaglio-Resume.pdf";
 
 const Contact = () => {
   const divRef = useRef(null);
@@ -38,7 +39,7 @@ const Contact = () => {
           </a>
         </div>
         <div>
-          <a href="/Jason-Gaglio-Resume.pdf" target="_blank">
+          <a href={resumePDF} download="Jason-Gaglio-Resume" target="_blank">
             <MotionButton text="Resume" svg={downloadSVG} />
           </a>
         </div>
