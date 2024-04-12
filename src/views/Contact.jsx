@@ -5,7 +5,7 @@ import downloadSVG from "../assets/SVG/download.svg";
 import MotionButton from "../components/MotionButton";
 import { mainVariant, childFromLeftVariant } from "../helpers/viewVariants";
 import { TitleCardH2 } from "../components/Title Card";
-import resumePDF from "/public/Jason-Gaglio-Resume.pdf";
+import resumePDF from "/Jason-Gaglio-Resume.pdf";
 
 const Contact = () => {
   const divRef = useRef(null);
