@@ -38,7 +38,7 @@ const Contact = () => {
           </a>
         </div>
         <div>
-          <a href="public/Jason-Gaglio-Resume.pdf" target="_blank">
+          <a href="/Jason-Gaglio-Resume.pdf" target="_blank">
             <MotionButton text="Resume" svg={downloadSVG} />
           </a>
         </div>
