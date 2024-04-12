@@ -11,19 +11,19 @@ const MainSection = ({ viewObject }) => {
 
   return (
     <section
-      className={`h-[calc(100vh-5rem)] snap-y snap-mandatory scroll-p-0 overflow-x-hidden overflow-y-scroll font-figtree sm:col-span-8 sm:max-h-screen sm:min-h-screen`}
+      className={`h-[calc(100svh-5rem)] snap-y snap-mandatory scroll-p-0 overflow-x-hidden overflow-y-scroll font-figtree sm:col-span-8 sm:max-h-svh sm:min-h-svh`}
     >
       <div
         ref={home.ref}
         id="home"
-        className={`flex h-full snap-start snap-always justify-center align-middle sm:max-h-screen sm:min-h-screen`}
+        className={`h-full snap-start snap-always sm:max-h-svh sm:min-h-svh`}
       >
         <Home />
       </div>
       <div
         ref={about.ref}
         id="about"
-        className={`h-full snap-start snap-always sm:max-h-screen sm:min-h-screen`}
+        className={`h-full snap-start snap-always sm:max-h-svh sm:min-h-svh`}
       >
         <AboutMe />
       </div>
@@ -31,28 +31,28 @@ const MainSection = ({ viewObject }) => {
       <div
         ref={skills.ref}
         id="skills"
-        className="h-full snap-start snap-always sm:max-h-screen sm:min-h-screen"
+        className="h-full snap-start snap-always sm:max-h-svh sm:min-h-svh"
       >
         <Skills />
       </div>
       <div
         ref={personal.ref}
         id="personal"
-        className="h-full snap-start snap-always sm:max-h-screen sm:min-h-screen"
+        className="h-full snap-start snap-always sm:max-h-svh sm:min-h-svh"
       >
         <PersonalProjects />
       </div>
       <div
         ref={client.ref}
         id="client"
-        className="h-full snap-start snap-always sm:max-h-screen sm:min-h-screen"
+        className="h-full snap-start snap-always sm:max-h-svh sm:min-h-svh"
       >
         <ClientProjects />
       </div>
       <div
         ref={contact.ref}
         id="contact"
-        className="h-full snap-start snap-always sm:max-h-screen sm:min-h-screen"
+        className="h-full snap-start snap-always sm:max-h-svh sm:min-h-svh"
       >
         <Contact />
       </div>

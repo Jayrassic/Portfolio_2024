@@ -19,7 +19,7 @@ const AboutMe = () => {
       whileInView="visible"
       viewport={{ amount: 0.1 }}
       ref={divRef}
-      className="no-scrollbar flex h-full flex-col overflow-x-hidden overflow-y-scroll p-4 sm:max-h-screen sm:min-h-screen sm:p-8"
+      className="no-scrollbar flex h-full flex-col overflow-x-hidden overflow-y-scroll p-4 sm:max-h-svh sm:min-h-svh sm:p-8"
     >
       <TitleCardH2 title="About Me" />
 
