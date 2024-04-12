@@ -74,40 +74,48 @@ const Home = () => {
 
   return (
     <motion.div
-      className={`no-scrollbar flex h-full snap-start flex-col overflow-x-hidden overflow-y-scroll p-4 text-center  font-bold text-slate-800 sm:max-h-svh sm:min-h-svh`}
+      className={`no-scrollbar flex h-full snap-start flex-col overflow-x-hidden overflow-y-scroll p-4 text-center font-bold text-slate-800 sm:max-h-svh sm:min-h-svh`}
       variants={containerVariant}
       initial="hidden"
       whileInView="visible"
       ref={divRef}
       viewport={{ amount: 0.1 }}
     >
-      <motion.h1 className="p-2 text-5xl sm:text-6xl" variants={fromTopVariant}>
-        Hello there,
-      </motion.h1>
-      <motion.h1
-        className="p-2 text-6xl sm:text-7xl"
-        variants={fromLeftVariant}
-      >
-        My name is{" "}
-        <motion.span animate className="text-emerald-400">
-          Jason
-        </motion.span>
-      </motion.h1>
-      <motion.p
-        className="p-2 text-base sm:text-xl"
-        variants={fromRightVariant}
-      >
-        I'm a Fullstack web developer.
-      </motion.p>
-      <motion.p className="p-2 text-base sm:text-xl" variants={fromLeftVariant}>
-        Lets build together!
-      </motion.p>
-      <motion.img
-        className="self-center p-3 sm:p-5"
-        variants={fromBottomVariant}
-        src={downArrow}
-        alt="arrow pointing down"
-      />
+      <div className="m-auto">
+        <motion.h1
+          className="p-2 text-5xl sm:text-6xl"
+          variants={fromTopVariant}
+        >
+          Hello there,
+        </motion.h1>
+        <motion.h1
+          className="p-2 text-6xl sm:text-7xl"
+          variants={fromLeftVariant}
+        >
+          My name is{" "}
+          <motion.span animate className="text-emerald-400">
+            Jason
+          </motion.span>
+        </motion.h1>
+        <motion.p
+          className="p-2 text-base sm:text-xl"
+          variants={fromRightVariant}
+        >
+          I'm a Fullstack web developer.
+        </motion.p>
+        <motion.p
+          className="p-2 text-base sm:text-xl"
+          variants={fromLeftVariant}
+        >
+          Lets build together!
+        </motion.p>
+        <motion.img
+          className="m-auto p-3 sm:p-5"
+          variants={fromBottomVariant}
+          src={downArrow}
+          alt="arrow pointing down"
+        />
+      </div>
     </motion.div>
   );
 };
