@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 import downArrow from "../assets/SVG/arrow-down.svg";
 
 const containerVariant = {
@@ -62,32 +63,47 @@ const fromBottomVariant = {
   },
 };
 
-const Home = ({ test }) => {
+const Home = () => {
+  const divRef = useRef(null);
+
+  const isInView = useInView(divRef, { amount: 0.1 });
+
+  useEffect(() => {
+    divRef.current.scroll(top);
+  }, [isInView]);
+
   return (
     <motion.div
-      className={`no-scrollbar flex snap-start flex-col content-center items-center justify-center overflow-x-hidden overflow-y-scroll p-4 text-center font-figtree font-bold text-slate-800 sm:max-h-screen sm:min-h-screen sm:p-8`}
+      className={`no-scrollbar flex h-full snap-start flex-col overflow-x-hidden overflow-y-scroll p-4 text-center  font-bold text-slate-800 sm:max-h-svh sm:min-h-svh`}
       variants={containerVariant}
       initial="hidden"
       whileInView="visible"
+      ref={divRef}
       viewport={{ amount: 0.1 }}
     >
-      <motion.h1 className="p-2 text-6xl" variants={fromTopVariant}>
+      <motion.h1 className="p-2 text-5xl sm:text-6xl" variants={fromTopVariant}>
         Hello there,
       </motion.h1>
-      <motion.h1 className="p-2 text-7xl" variants={fromLeftVariant}>
+      <motion.h1
+        className="p-2 text-6xl sm:text-7xl"
+        variants={fromLeftVariant}
+      >
         My name is{" "}
         <motion.span animate className="text-emerald-400">
           Jason
         </motion.span>
       </motion.h1>
-      <motion.p className="p-2 text-xl" variants={fromRightVariant}>
+      <motion.p
+        className="p-2 text-base sm:text-xl"
+        variants={fromRightVariant}
+      >
         I'm a Fullstack web developer.
       </motion.p>
-      <motion.p className="p-2 text-xl" variants={fromLeftVariant}>
+      <motion.p className="p-2 text-base sm:text-xl" variants={fromLeftVariant}>
         Lets build together!
       </motion.p>
       <motion.img
-        className="p-3 sm:p-5"
+        className="self-center p-3 sm:p-5"
         variants={fromBottomVariant}
         src={downArrow}
         alt="arrow pointing down"
