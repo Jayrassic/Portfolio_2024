@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import githubSVG from "../assets/SVG/github.svg";
 import emailSVG from "../assets/SVG/email.svg";
 import PropTypes from "prop-types";
@@ -12,13 +12,23 @@ const Nav = ({ viewObject }) => {
 
   let needMenu = window.screen.width <= 640;
 
-  window.addEventListener("resize", () =>
-    setShowMenu(window.screen.width <= 640),
-  );
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      if (window.screen.width <= 640) {
+        setShowMenu(false);
+      } else {
+        setShowMenu(true);
+      }
+    });
 
-  window.addEventListener("orientationchange", () =>
-    setShowMenu(window.screen.width <= 640),
-  );
+    return window.addEventListener("resize", () => {
+      if (window.screen.width <= 640) {
+        setShowMenu(false);
+      } else {
+        setShowMenu(true);
+      }
+    });
+  }, []);
 
   function scrollHandler(e) {
     e.preventDefault();
@@ -32,10 +42,10 @@ const Nav = ({ viewObject }) => {
   }
 
   return (
-    <nav className="z-30 flex h-20 justify-evenly text-center font-figtree shadow-md sm:sticky sm:top-0 sm:col-span-2 sm:h-screen sm:flex-col sm:bg-emerald-400">
+    <nav className=" z-30 flex h-20 justify-evenly text-center font-figtree shadow-md sm:sticky sm:top-0 sm:col-span-2 sm:h-svh sm:flex-col sm:overflow-y-auto sm:overflow-x-hidden sm:bg-emerald-400">
       <div className="z-20 flex flex-grow items-center justify-around bg-emerald-400 p-1 shadow-md sm:flex-grow-0 sm:p-3 sm:shadow-none ">
         <h1
-          className={`m-1 self-center p-1 text-4xl font-extrabold ${home.state ? "text-slate-100" : ""}`}
+          className={`mt-2 self-center pt-1 text-3xl font-extrabold ${home.state ? "text-slate-100" : ""}`}
           onClick={(e) => scrollHandler(e)}
         >
           <a href="#home">Jason Gaglio</a>
@@ -45,8 +55,16 @@ const Nav = ({ viewObject }) => {
 
       <motion.div
         className={`absolute top-[5rem] z-10 flex w-full flex-col items-end gap-3 rounded-b-lg bg-emerald-300 py-4 text-center font-bold text-neutral-800 sm:static sm:flex-grow  sm:items-center sm:justify-around sm:gap-4 sm:bg-emerald-400 sm:py-0 sm:shadow-none`}
-        initial={needMenu && { y: showMenu ? 0 : -305, opacity: 0 }}
-        animate={needMenu && { y: showMenu ? 0 : -305, opacity: 1 }}
+        initial={
+          needMenu
+            ? { y: showMenu ? 0 : -305, opacity: 0 }
+            : { y: 0, opacity: 1 }
+        }
+        animate={
+          needMenu
+            ? { y: showMenu ? 0 : -305, opacity: 1 }
+            : { y: 0, opacity: 1 }
+        }
         transition={{ duration: 0.5 }}
       >
         <motion.ul
