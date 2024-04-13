@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { MotionConfig, motion } from "framer-motion";
+import PropTypes from "prop-types";
 
 const VARIANTS = {
   top: {
@@ -71,6 +71,11 @@ const HamburgerButton = ({ state, setState }) => {
       </motion.button>
     </MotionConfig>
   );
+};
+
+HamburgerButton.propTypes = {
+  state: PropTypes.bool,
+  setState: PropTypes.func,
 };
 
 export default HamburgerButton;
