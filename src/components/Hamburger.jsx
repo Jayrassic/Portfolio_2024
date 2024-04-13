@@ -43,6 +43,7 @@ const HamburgerButton = ({ state, setState }) => {
       }}
     >
       <motion.button
+        aria-label={state ? "close menu" : "open menu"}
         initial={false}
         animate={state ? "open" : "closed"}
         onClick={() => setState((pv) => !pv)}
