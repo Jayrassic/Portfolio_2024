@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 
 export const TitleCardH2 = ({ title }) => {
   return (
-    <motion.div variants={childFromRightVariant}>
+    <motion.div tabIndex={0} variants={childFromRightVariant}>
       <h2 className="mb-2 rounded-md border-2 border-solid border-black bg-emerald-400 p-2 text-center text-3xl font-bold sm:mb-8 sm:text-4xl">
         {title}
       </h2>
@@ -17,7 +17,7 @@ export const TitleCardH2 = ({ title }) => {
 
 export const TitleCardH3 = ({ title }) => {
   return (
-    <motion.div variants={childFromLeftVariant}>
+    <motion.div tabIndex={0} variants={childFromLeftVariant}>
       <h3 className="mb-2 rounded-md border-2 border-solid border-black bg-emerald-400 p-2 text-center text-3xl font-bold sm:mb-8 sm:text-4xl">
         {title}
       </h3>
