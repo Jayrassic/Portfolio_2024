@@ -54,7 +54,7 @@ const Nav = ({ viewObject }) => {
       </div>
 
       <motion.div
-        className={`absolute top-[5rem] z-10 flex w-full flex-col items-end gap-3 rounded-b-lg bg-emerald-300 py-4 text-center font-bold text-neutral-800 sm:static sm:flex-grow  sm:items-center sm:justify-around sm:gap-4 sm:bg-emerald-400 sm:py-0 sm:shadow-none`}
+        className={`absolute top-[5rem] z-10 flex w-full flex-col items-end gap-3 rounded-b-lg bg-emerald-300 py-4 text-center font-bold text-neutral-800 shadow-[0px_3px_5px_0px_rgb(0,0,0,0.4)] sm:static sm:flex-grow  sm:items-center sm:justify-around sm:gap-4 sm:bg-emerald-400 sm:py-0 sm:shadow-none`}
         initial={
           needMenu
             ? { y: showMenu ? 0 : -305, opacity: 0 }
