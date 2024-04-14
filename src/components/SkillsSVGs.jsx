@@ -1,5 +1,9 @@
 import { motion } from "framer-motion";
 
+import SkillsSVGContainer from "./SkillsSVGContainer";
+
+import { mainVariant } from "../helpers/skillsSVGVarients";
+
 import javascriptSVG from "../assets/SVG/javascript.svg";
 import bootstrapSVG from "../assets/SVG/bootstrap.svg";
 import typescriptSVG from "../assets/SVG/typescript.svg";
@@ -12,28 +16,6 @@ import mongoSVG from "../assets/SVG/mongodb.svg";
 import nodeSVG from "../assets/SVG/node.svg";
 import ejsSVG from "../assets/SVG/ejs.svg";
 
-const mainVariant = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.25,
-      when: "beforeChildren",
-    },
-  },
-};
-
-const childFromRightVariant = {
-  hidden: { opacity: 0, x: "110vw" },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { type: "spring", duration: 0.5 },
-  },
-};
-
 export const FrontendSkillsSVGs = () => {
   return (
     <motion.div
@@ -42,41 +24,11 @@ export const FrontendSkillsSVGs = () => {
       whileInView="visible"
       className="flex w-full justify-evenly"
     >
-      <motion.img
-        className="drop-shadow-xl"
-        variants={childFromRightVariant}
-        src={javascriptSVG}
-        width="100px"
-        alt="javascript svg"
-      />
-      <motion.img
-        className="drop-shadow-xl"
-        variants={childFromRightVariant}
-        src={typescriptSVG}
-        width="100px"
-        alt="typescript svg"
-      />
-      <motion.img
-        className="drop-shadow-xl"
-        variants={childFromRightVariant}
-        src={tailwindSVG}
-        width="100px"
-        alt="tailwind svg"
-      />
-      <motion.img
-        className="drop-shadow-xl"
-        variants={childFromRightVariant}
-        src={bootstrapSVG}
-        width="100px"
-        alt="bootstrap svg"
-      />
-      <motion.img
-        className="drop-shadow-xl"
-        variants={childFromRightVariant}
-        src={reactSVG}
-        width="100px"
-        alt="react svg"
-      />
+      <SkillsSVGContainer svgSource={javascriptSVG} alt="javascript svg" />
+      <SkillsSVGContainer svgSource={typescriptSVG} alt="typescript svg" />
+      <SkillsSVGContainer svgSource={tailwindSVG} alt="tailwind svg" />
+      <SkillsSVGContainer svgSource={bootstrapSVG} alt="bootstrap svg" />
+      <SkillsSVGContainer svgSource={reactSVG} alt="react svg" />
     </motion.div>
   );
 };
@@ -89,41 +41,11 @@ export const BackendSkillsSVGs = () => {
       whileInView="visible"
       className="flex w-full justify-evenly"
     >
-      <motion.img
-        className="drop-shadow-xl"
-        variants={childFromRightVariant}
-        src={nodeSVG}
-        width="100px"
-        alt="node svg"
-      />
-      <motion.img
-        className="drop-shadow-xl"
-        variants={childFromRightVariant}
-        src={expressSVG}
-        width="100px"
-        alt="express svg"
-      />
-      <motion.img
-        className="drop-shadow-xl"
-        variants={childFromRightVariant}
-        src={mongoSVG}
-        width="100px"
-        alt="mongoDB svg"
-      />
-      <motion.img
-        className="drop-shadow-xl"
-        variants={childFromRightVariant}
-        src={jwtSVG}
-        width="100px"
-        alt="JWT svg"
-      />
-      <motion.img
-        className="drop-shadow-xl"
-        variants={childFromRightVariant}
-        src={ejsSVG}
-        width="100px"
-        alt="EJS svg"
-      />
+      <SkillsSVGContainer svgSource={nodeSVG} alt="node svg" />
+      <SkillsSVGContainer svgSource={expressSVG} alt="express svg" />
+      <SkillsSVGContainer svgSource={mongoSVG} alt="mongoDB svg" />
+      <SkillsSVGContainer svgSource={jwtSVG} alt="JWT svg" />
+      <SkillsSVGContainer svgSource={ejsSVG} alt="EJS svg" />
     </motion.div>
   );
 };
