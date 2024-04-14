@@ -43,30 +43,35 @@ export const FrontendSkillsSVGs = () => {
       className="flex w-full justify-evenly"
     >
       <motion.img
+        className="drop-shadow-xl"
         variants={childFromRightVariant}
         src={javascriptSVG}
         width="100px"
         alt="javascript svg"
       />
       <motion.img
+        className="drop-shadow-xl"
         variants={childFromRightVariant}
         src={typescriptSVG}
         width="100px"
         alt="typescript svg"
       />
       <motion.img
+        className="drop-shadow-xl"
         variants={childFromRightVariant}
         src={tailwindSVG}
         width="100px"
         alt="tailwind svg"
       />
       <motion.img
+        className="drop-shadow-xl"
         variants={childFromRightVariant}
         src={bootstrapSVG}
         width="100px"
         alt="bootstrap svg"
       />
       <motion.img
+        className="drop-shadow-xl"
         variants={childFromRightVariant}
         src={reactSVG}
         width="100px"
@@ -85,30 +90,35 @@ export const BackendSkillsSVGs = () => {
       className="flex w-full justify-evenly"
     >
       <motion.img
+        className="drop-shadow-xl"
         variants={childFromRightVariant}
         src={nodeSVG}
         width="100px"
         alt="node svg"
       />
       <motion.img
+        className="drop-shadow-xl"
         variants={childFromRightVariant}
         src={expressSVG}
         width="100px"
         alt="express svg"
       />
       <motion.img
+        className="drop-shadow-xl"
         variants={childFromRightVariant}
         src={mongoSVG}
         width="100px"
         alt="mongoDB svg"
       />
       <motion.img
+        className="drop-shadow-xl"
         variants={childFromRightVariant}
         src={jwtSVG}
         width="100px"
         alt="JWT svg"
       />
       <motion.img
+        className="drop-shadow-xl"
         variants={childFromRightVariant}
         src={ejsSVG}
         width="100px"

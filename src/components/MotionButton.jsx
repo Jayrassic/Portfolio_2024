@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const MotionButton = ({ text, svg }) => {
   return (
     <motion.button
-      className="flex items-center justify-center border-2 border-solid border-black  bg-emerald-400 p-4 shadow-md"
+      className="flex items-center justify-center border-2 border-solid border-black  bg-emerald-400 p-4 shadow-[0px_3px_5px_0px_rgb(0,0,0,0.4)]"
       whileHover={{
         scale: 1.3,
         borderRadius: ".5rem",

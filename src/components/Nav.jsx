@@ -42,7 +42,7 @@ const Nav = ({ viewObject }) => {
   }
 
   return (
-    <nav className=" z-30 flex h-20 justify-evenly text-center font-figtree shadow-md sm:sticky sm:top-0 sm:col-span-2 sm:h-svh sm:flex-col sm:overflow-y-auto sm:overflow-x-hidden sm:bg-emerald-400">
+    <nav className=" z-30 flex h-20 justify-evenly text-center font-figtree shadow-[0px_3px_5px_0px_rgb(0,0,0,0.4)] sm:sticky sm:top-0 sm:col-span-2 sm:h-svh sm:flex-col sm:overflow-y-auto sm:overflow-x-hidden sm:bg-emerald-400 sm:shadow-[3px_0px_5px_0px_rgb(0,0,0,0.5)]">
       <div className="z-20 flex flex-grow items-center justify-around bg-emerald-400 p-1 shadow-md sm:flex-grow-0 sm:p-3 sm:shadow-none ">
         <h1
           className={`mt-2 self-center pt-1 text-3xl font-extrabold ${home.state ? "text-slate-100" : ""}`}
