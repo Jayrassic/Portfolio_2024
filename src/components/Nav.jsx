@@ -10,11 +10,11 @@ const Nav = ({ viewObject }) => {
 
   const [showMenu, setShowMenu] = useState(false);
 
-  let needMenu = window.screen.width <= 640;
+  let needMenu = window.innerWidth <= 640;
 
   useEffect(() => {
     window.addEventListener("resize", () => {
-      if (window.screen.width <= 640) {
+      if (window.innerWidth <= 640) {
         setShowMenu(false);
       } else {
         setShowMenu(true);
@@ -22,7 +22,7 @@ const Nav = ({ viewObject }) => {
     });
 
     return window.addEventListener("resize", () => {
-      if (window.screen.width <= 640) {
+      if (window.innerWidth <= 640) {
         setShowMenu(false);
       } else {
         setShowMenu(true);
