@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import resumePDF from "/Jason-Gaglio-Resume.pdf";
 import githubSVG from "../assets/SVG/github.svg";
 import emailSVG from "../assets/SVG/email.svg";
 import PropTypes from "prop-types";
@@ -54,21 +55,21 @@ const Nav = ({ viewObject }) => {
       </div>
 
       <motion.div
-        className={`absolute top-[5rem] z-10 flex w-full flex-col items-end gap-3 rounded-b-lg bg-emerald-300 py-4 text-center font-bold text-neutral-800 shadow-[0px_3px_5px_0px_rgb(0,0,0,0.4)] sm:static sm:flex-grow  sm:items-center sm:justify-around sm:gap-4 sm:bg-emerald-400 sm:py-0 sm:shadow-none`}
+        className={`absolute top-[5rem] z-10 flex w-full flex-col items-end gap-2 rounded-b-lg bg-emerald-300 py-4 text-center font-bold text-neutral-800 shadow-[0px_3px_5px_0px_rgb(0,0,0,0.4)] sm:static sm:flex-grow  sm:items-center sm:justify-around sm:gap-4 sm:bg-emerald-400 sm:py-0 sm:shadow-none`}
         initial={
           needMenu
-            ? { y: showMenu ? 0 : -305, opacity: 0 }
+            ? { y: showMenu ? 0 : -400, opacity: 0 }
             : { y: 0, opacity: 1 }
         }
         animate={
           needMenu
-            ? { y: showMenu ? 0 : -305, opacity: 1 }
+            ? { y: showMenu ? 0 : -400, opacity: 1 }
             : { y: 0, opacity: 1 }
         }
         transition={{ duration: 0.5 }}
       >
         <motion.ul
-          className={`flex flex-col items-end gap-2 px-8 py-2 text-center font-bold text-neutral-800 sm:relative sm:my-9 sm:items-center sm:gap-4 sm:bg-emerald-400 sm:p-4 sm:shadow-none`}
+          className={`flex flex-col items-end gap-2 px-8 py-2 text-center font-bold text-neutral-800 sm:relative sm:items-center sm:gap-4 sm:bg-emerald-400 sm:shadow-none`}
           onClick={(e) => scrollHandler(e)}
         >
           <motion.li className="w-fit" whileHover={{ x: 4, scale: 1.2 }}>
@@ -114,7 +115,16 @@ const Nav = ({ viewObject }) => {
             </a>
           </motion.li>
         </motion.ul>
-        <div className="flex gap-4 px-8 py-2 sm:w-full sm:justify-evenly ">
+        <motion.a
+          className="px-8 py-2 text-lg text-slate-100"
+          whileHover={{ x: 4, scale: 1.2 }}
+          href={resumePDF}
+          download="Jason-Gaglio-Resume"
+          target="_blank"
+        >
+          Download my Resume
+        </motion.a>
+        <div className="flex gap-4 px-8 py-2 sm:w-full sm:justify-evenly">
           <a href="https://github.com/Jayrassic">
             <motion.img
               width="35px"
