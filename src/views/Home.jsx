@@ -109,12 +109,14 @@ const Home = () => {
         >
           Lets build together!
         </motion.p>
-        <motion.img
-          className="m-auto p-3 sm:p-5"
-          variants={fromBottomVariant}
-          src={downArrow}
-          alt="arrow pointing down"
-        />
+        <a href="#about">
+          <motion.img
+            className="m-auto p-3 sm:p-5"
+            variants={fromBottomVariant}
+            src={downArrow}
+            alt="arrow pointing down"
+          />
+        </a>
       </div>
     </motion.div>
   );
