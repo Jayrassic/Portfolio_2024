@@ -38,7 +38,7 @@ function App() {
   };
 
   return (
-    <main className=" max-h-svh min-h-svh bg-slate-100 sm:grid sm:grid-cols-10">
+    <main className=" max-h-svh min-h-svh bg-slate-100 selection:bg-emerald-200 sm:grid sm:grid-cols-10 ">
       <Nav viewObject={inViewObject} />
       <MainSection viewObject={inViewObject} />
     </main>
