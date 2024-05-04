@@ -101,7 +101,7 @@ const Home = () => {
           className="p-2 text-base sm:text-xl"
           variants={fromRightVariant}
         >
-          I'm a Fullstack web developer.
+          I'm a full stack web developer.
         </motion.p>
         <motion.p
           className="p-2 text-base sm:text-xl"

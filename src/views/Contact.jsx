@@ -31,7 +31,7 @@ const Contact = () => {
         className="flex w-full flex-grow flex-col items-center justify-center gap-12 p-4 text-center text-lg sm:m-auto"
       >
         <h3 className=" text-2xl sm:text-3xl">
-          Looking for a Full-Stack web developer?
+          Looking for a full stack web developer?
         </h3>
         <div>
           <a href="mailto:jasongaglio@jasongaglio.com">
