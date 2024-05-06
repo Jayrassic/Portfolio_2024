@@ -28,51 +28,62 @@ const AboutMe = () => {
         variants={childFromLeftVariant}
       >
         <p className="py-2 ">
-          I’ve always had a passion for building things. It started with a
-          curiosity of how things work and eventually led into a career in
-          manufacturing and now web development.
+          I have always had a passion for building things. It started with a
+          curiosity of how things work and eventually led to being the President
+          and CEO of a successful auto parts manufacturing business. With the
+          aid of The Odin Project, my passion for building things has turned
+          into a burgeoning career in web development.
         </p>
+
         <p className="py-2 ">
           I studied mechanical engineering at NYU Tandon School of Engineering
           (formerly Polytechnic University), but when my family needed help
           running their automotive parts manufacturing company, I transitioned
-          into that industry; starting out as an assembler, eventually moving to
-          shop manager, and then fully owning and operating the company. At my
-          previous company, we designed and manufactured parts for buses and
-          sold them throughout North America.{" "}
+          into that industry and took on progressively more responsible
+          leadership roles. The company designed and manufactured parts for
+          buses and sold them throughout North America. I moved up the ranks
+          from an assembler, to the shop manager, and ultimately, to fully
+          owning and operating the company.
         </p>
+
         <p className="py-2 ">
-          During my time as the President and CEO, I had many tasks. I was
-          responsible for client relations, this included our distributors,
-          government municipalities, and direct to customers sales. I was in
-          charge of production, sourcing raw materials as well as managing
-          inventory and work orders. I also was in charge of research,
-          designing, and modifying products. I worked towards digitizing the
-          company’s systems and helping them to become more functional and
-          productive in a competitive market.
+          During my time as the President and CEO, I successfully maintained a
+          complex and complicated slate of financial, operational, and
+          logistical responsibilities involving both products and personnel. I
+          also was responsible for client relations, which included managing
+          relationships with our distributors, government municipalities, and
+          direct customer sales. I oversaw production, sourcing of materials, as
+          well as managing inventory and work orders. Another area of my purview
+          was the research, design, and modification of new and existing
+          products. I digitized the company’s systems, which allowed us to be
+          more functional and productive in a highly competitive market.
         </p>
+
         <p className="py-2 ">
-          As much as I loved doing what I was doing, eventually the industry
-          changed from making products locally to sending designs offshore. The
-          industry was also becoming less receptive to new designs and instead
-          wanted carbon copies of the same few products. For these reasons, my
-          emotional investment in the company was waning. Because of the hard
-          work and investment I had put into the company we found ourselves in
-          the fortunate position of receiving buyout offers. We were bought out
-          and I was free to transition to a new field that would allow me to
-          continue to explore my passion for building products.
+          Though I loved the work of running a business, eventually the industry
+          changed from making products locally to outsourcing designs offshore.
+          The industry was also becoming less receptive to new designs, instead
+          wanting carbon copies of the same few products. There was little to no
+          appetite for innovation or creativity. For these reasons, my emotional
+          investment in the company waned. Because of our hard work, and the
+          innovations I was able to bring to the company with my team, we found
+          ourselves in the fortunate position of receiving buyout offers. We
+          sold the business, and I began to transition to the field of web
+          development - a space that I felt would allow me to explore my passion
+          for building products and technologies.
         </p>
+
         <p className="py-2 ">
-          After the sale of the company, I thought about the many opportunities
-          that were available to me and I ultimately decided on learning web
-          development and programming. As someone who spent a lot of time
-          reading, researching and playing video games on the internet, I was
-          excited learning about the tools and tech that bring it together and
-          thought about making it my career going forward. I partook in The Odin
-          Project and learned a ton of valuable skills that will propel me
-          forward into the next phase of my career. I am excited to find new
-          ways to learn and grow in this field and continue to build new and
-          exiting products.{" "}
+          As someone who spent a lot of time reading, researching, and playing
+          video games on the internet, I was excited to actually learn about the
+          tools and technologies that bring it all to life. I became so
+          interested and invested in this learning that I decided to pursue web
+          development as my next career path. I studied and gained creative
+          skills and insights through The Odin Project, where I learned a wealth
+          of valuable skills that will propel me into the next phase of my
+          career. I am excited to find new ways to learn and grow in this field
+          and continue to build new and exciting products to help, educate, and
+          entertain people.
         </p>
       </motion.div>
     </motion.div>
