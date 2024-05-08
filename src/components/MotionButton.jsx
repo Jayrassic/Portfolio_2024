@@ -17,7 +17,7 @@ const MotionButton = ({ text, svg }) => {
       }}
     >
       {text}
-      <img className="inline px-2" src={svg} alt="email icon" />
+      <img className="inline px-2" src={svg} alt="email icon" loading="lazy" />
     </motion.button>
   );
 };

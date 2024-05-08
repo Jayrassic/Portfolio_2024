@@ -131,6 +131,7 @@ const Nav = ({ viewObject }) => {
               whileHover={{ x: 4, scale: 1.12 }}
               src={githubSVG}
               alt="github logo"
+              loading="lazy"
             />
           </a>
           <a href="mailto:jasongaglio@jasongaglio.com">
@@ -139,6 +140,7 @@ const Nav = ({ viewObject }) => {
               whileHover={{ x: 4, scale: 1.12 }}
               src={emailSVG}
               alt="mail envelop"
+              loading="lazy"
             />
           </a>
         </div>

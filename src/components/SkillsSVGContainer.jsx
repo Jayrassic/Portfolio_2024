@@ -10,6 +10,7 @@ const SkillsSVGContainer = ({ svgSource, alt }) => {
       src={svgSource}
       width="100px"
       alt={alt}
+      loading="lazy"
     />
   );
 };
