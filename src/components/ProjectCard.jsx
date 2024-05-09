@@ -18,7 +18,6 @@ const ProjectCard = ({
           className="rounded-md border-2 border-solid border-black shadow-lg sm:max-w-96"
           src={projectScreenshot}
           alt="Screenshot of Project"
-          loading="lazy"
         />
       </a>
       <p className="p-2 text-lg">{description}</p>
@@ -30,12 +29,12 @@ const ProjectCard = ({
           {githubLink && siteLink ? "Links:" : "Link:"}
         </p>
         <a href={siteLink} target="_blank">
-          <img loading="lazy" src={websiteSVG} alt="website SVG" />
+          <img src={websiteSVG} alt="website SVG" />
         </a>
 
         {githubLink && (
           <a href={githubLink} target="_blank">
-            <img src={githubSVG} alt="github logo" loading="lazy" />
+            <img src={githubSVG} alt="github logo" />
           </a>
         )}
       </div>
