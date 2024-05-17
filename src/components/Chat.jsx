@@ -5,10 +5,21 @@ const Chat = () => {
   const [loading, setLoading] = useState(false);
   const [userQuestion, setUserQuestion] = useState("");
 
-  function chatHandler() {
+  async function chatHandler() {
     setLoading(true);
     const userMessage = { role: "user", content: userQuestion };
-    setMessages([...messages, userMessage]);
+    setMessages((messages) => [...messages, userMessage]);
+    setUserQuestion("");
+    const aiResponse = await fetch("http://localhost:3000/", {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      mode: "cors",
+      body: JSON.stringify(userMessage),
+    });
+    const aiMessage = await aiResponse.json();
+    setMessages((messages) => [...messages, aiMessage]);
     setLoading(false);
   }
 
