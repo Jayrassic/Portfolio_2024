@@ -24,11 +24,31 @@ export const FrontendSkillsSVGs = () => {
       whileInView="visible"
       className="flex w-full justify-evenly"
     >
-      <SkillsSVGContainer svgSource={javascriptSVG} alt="javascript svg" />
-      <SkillsSVGContainer svgSource={typescriptSVG} alt="typescript svg" />
-      <SkillsSVGContainer svgSource={tailwindSVG} alt="tailwind svg" />
-      <SkillsSVGContainer svgSource={bootstrapSVG} alt="bootstrap svg" />
-      <SkillsSVGContainer svgSource={reactSVG} alt="react svg" />
+      <SkillsSVGContainer
+        svgSource={javascriptSVG}
+        alt="javascript svg"
+        displayText="Javascript"
+      />
+      <SkillsSVGContainer
+        svgSource={typescriptSVG}
+        alt="typescript svg"
+        displayText="Typescript"
+      />
+      <SkillsSVGContainer
+        svgSource={tailwindSVG}
+        alt="tailwind svg"
+        displayText="Tailwind.CSS"
+      />
+      <SkillsSVGContainer
+        svgSource={bootstrapSVG}
+        alt="bootstrap svg"
+        displayText="Bootstrap"
+      />
+      <SkillsSVGContainer
+        svgSource={reactSVG}
+        alt="react svg"
+        displayText="React"
+      />
     </motion.div>
   );
 };
@@ -41,11 +61,23 @@ export const BackendSkillsSVGs = () => {
       whileInView="visible"
       className="flex w-full justify-evenly"
     >
-      <SkillsSVGContainer svgSource={nodeSVG} alt="node svg" />
-      <SkillsSVGContainer svgSource={expressSVG} alt="express svg" />
-      <SkillsSVGContainer svgSource={mongoSVG} alt="mongoDB svg" />
-      <SkillsSVGContainer svgSource={jwtSVG} alt="JWT svg" />
-      <SkillsSVGContainer svgSource={ejsSVG} alt="EJS svg" />
+      <SkillsSVGContainer
+        svgSource={nodeSVG}
+        alt="node svg"
+        displayText="Node.js"
+      />
+      <SkillsSVGContainer
+        svgSource={expressSVG}
+        alt="express svg"
+        displayText="Express"
+      />
+      <SkillsSVGContainer
+        svgSource={mongoSVG}
+        alt="mongoDB svg"
+        displayText="MongoDB"
+      />
+      <SkillsSVGContainer svgSource={jwtSVG} alt="JWT svg" displayText="JWT" />
+      <SkillsSVGContainer svgSource={ejsSVG} alt="EJS svg" displayText="EJS" />
     </motion.div>
   );
 };
