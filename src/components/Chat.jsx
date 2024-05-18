@@ -1,15 +1,27 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
   const [userQuestion, setUserQuestion] = useState("");
 
+  const chatWindowRef = useRef(null);
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    chatWindowRef.current.scrollTo({
+      top: chatWindowRef.current.scrollHeight,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, [messages]);
+
   async function chatHandler() {
     setLoading(true);
     const userMessage = { role: "user", content: userQuestion };
     setMessages((messages) => [...messages, userMessage]);
     setUserQuestion("");
+    inputRef.current.value = "";
     const aiResponse = await fetch("http://localhost:3000/", {
       headers: {
         "Content-Type": "application/json",
@@ -28,6 +40,7 @@ const Chat = () => {
       <div
         className="no-scrollbar flex h-96 flex-col overflow-scroll rounded-lg border-2 border-black bg-white"
         id="chat-window"
+        ref={chatWindowRef}
       >
         {messages.map((message, index) => {
           return (
@@ -55,6 +68,7 @@ const Chat = () => {
           id="question"
           placeholder="Ask my AI a question"
           onChange={(e) => setUserQuestion(e.target.value)}
+          ref={inputRef}
         />
         <button
           className="rounded-md border-l-2 border-r-2 border-black bg-emerald-400 px-4 py-2 font-bold"
