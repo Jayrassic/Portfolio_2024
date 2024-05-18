@@ -9,6 +9,7 @@ function App() {
   const [personalRef, personalViewState] = useInView({ threshold: 0.5 });
   const [clientRef, clientViewState] = useInView({ threshold: 0.5 });
   const [contactRef, contactViewState] = useInView({ threshold: 0.5 });
+  const [aiRef, aiViewState] = useInView({ threshold: 0.5 });
 
   const inViewObject = {
     home: {
@@ -34,6 +35,10 @@ function App() {
     contact: {
       ref: contactRef,
       state: contactViewState,
+    },
+    ai: {
+      ref: aiRef,
+      state: aiViewState,
     },
   };
 

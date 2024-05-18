@@ -5,9 +5,10 @@ import PersonalProjects from "../views/PersonalProjects";
 import ClientProjects from "../views/ClientProjects";
 import Contact from "../views/Contact";
 import PropTypes from "prop-types";
+import ChatPage from "../views/ChatPage";
 
 const MainSection = ({ viewObject }) => {
-  const { home, about, skills, personal, client, contact } = viewObject;
+  const { home, about, skills, personal, client, contact, ai } = viewObject;
 
   return (
     <section
@@ -48,6 +49,13 @@ const MainSection = ({ viewObject }) => {
         className="h-full snap-start snap-always sm:max-h-svh sm:min-h-svh"
       >
         <ClientProjects />
+      </div>
+      <div
+        ref={ai.ref}
+        id="ai"
+        className={`h-full snap-start snap-always sm:max-h-svh sm:min-h-svh`}
+      >
+        <ChatPage />
       </div>
       <div
         ref={contact.ref}

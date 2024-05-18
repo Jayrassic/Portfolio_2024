@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 import HamburgerButton from "./Hamburger";
 
 const Nav = ({ viewObject }) => {
-  const { home, about, skills, personal, client, contact } = viewObject;
+  const { home, about, skills, personal, client, contact, ai } = viewObject;
 
   const [showMenu, setShowMenu] = useState(false);
 
@@ -104,6 +104,14 @@ const Nav = ({ viewObject }) => {
               href="#client"
             >
               Client Projects
+            </a>
+          </motion.li>
+          <motion.li className="w-fit" whileHover={{ x: 4, scale: 1.2 }}>
+            <a
+              className={ai.state ? "text-2xl text-slate-100" : "text-2xl"}
+              href="#ai"
+            >
+              AI Assistant
             </a>
           </motion.li>
           <motion.li className="w-fit" whileHover={{ x: 4, scale: 1.12 }}>
