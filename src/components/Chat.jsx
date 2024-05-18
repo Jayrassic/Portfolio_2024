@@ -23,16 +23,24 @@ const Chat = () => {
     setMessages((messages) => [...messages, userMessage]);
     setUserQuestion("");
     inputRef.current.value = "";
-    const aiResponse = await fetch("http://localhost:3000/", {
-      headers: {
-        "Content-Type": "application/json",
-      },
-      method: "POST",
-      mode: "cors",
-      body: JSON.stringify(userMessage),
-    });
-    const aiMessage = await aiResponse.json();
-    setMessages((messages) => [...messages, aiMessage]);
+    try {
+      const aiResponse = await fetch("http://localhost:3000/", {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+        mode: "cors",
+        body: JSON.stringify(userMessage),
+      });
+      const aiMessage = await aiResponse.json();
+      setMessages((messages) => [...messages, aiMessage]);
+    } catch (err) {
+      const errorMessage = {
+        role: "assistant",
+        content: `Im sorry but I am experiencing technical difficulties. ${err}`,
+      };
+      setMessages((messages) => [...messages, errorMessage]);
+    }
     setLoading(false);
   }
 
