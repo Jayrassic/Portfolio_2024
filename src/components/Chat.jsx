@@ -16,7 +16,8 @@ const Chat = () => {
     });
   }, [messages]);
 
-  async function chatHandler() {
+  async function chatHandler(e) {
+    e.preventDefault();
     setLoading(true);
     const userMessage = { role: "user", content: userQuestion };
     setMessages((messages) => [...messages, userMessage]);
@@ -60,7 +61,10 @@ const Chat = () => {
           );
         })}
       </div>
-      <div className="my-4 flex rounded-lg border-y-2 border-l-2 border-black bg-white ">
+      <form
+        onSubmit={(e) => chatHandler(e)}
+        className="my-4 flex rounded-lg border-y-2 border-l-2 border-black bg-white "
+      >
         <input
           className="flex-grow rounded-lg  p-2"
           type="text"
@@ -71,13 +75,14 @@ const Chat = () => {
           ref={inputRef}
         />
         <button
+          type="submit"
           className="rounded-md border-l-2 border-r-2 border-black bg-emerald-400 px-4 py-2 font-bold"
-          onClick={() => chatHandler()}
+          // onClick={() => chatHandler()}
           disabled={loading ? true : false}
         >
           Send
         </button>
-      </div>
+      </form>
     </div>
   );
 };
