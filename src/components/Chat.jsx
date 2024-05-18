@@ -24,23 +24,46 @@ const Chat = () => {
   }
 
   return (
-    <div id="chat-container">
-      <div className="h-96 w-3/4 bg-white" id="chat-window">
+    <div id="chat-container" className="flex flex-col">
+      <div
+        className="no-scrollbar flex h-96 flex-col overflow-scroll rounded-lg border-2 border-black bg-white"
+        id="chat-window"
+      >
         {messages.map((message, index) => {
-          return <p key={index}>{message.content}</p>;
+          return (
+            <div
+              className={`m-3 max-w-[50%] rounded-md p-2 ${
+                message.role === "user"
+                  ? "self-start bg-blue-300 "
+                  : "self-end bg-emerald-400"
+              }`}
+              key={index}
+            >
+              <p className="font-bold italic">
+                {message.role === "user" ? "User" : "Non-Bias AI"}
+              </p>
+              <p>{message.content}</p>
+            </div>
+          );
         })}
       </div>
-      <label htmlFor="question"></label>
-      <input
-        type="text"
-        name="question"
-        id="question"
-        placeholder="Ask my AI a question"
-        onChange={(e) => setUserQuestion(e.target.value)}
-      />
-      <button onClick={() => chatHandler()} disabled={loading ? true : false}>
-        Send
-      </button>
+      <div className="my-4 flex rounded-lg border-y-2 border-l-2 border-black bg-white ">
+        <input
+          className="flex-grow rounded-lg  p-2"
+          type="text"
+          name="question"
+          id="question"
+          placeholder="Ask my AI a question"
+          onChange={(e) => setUserQuestion(e.target.value)}
+        />
+        <button
+          className="rounded-md border-l-2 border-r-2 border-black bg-emerald-400 px-4 py-2 font-bold"
+          onClick={() => chatHandler()}
+          disabled={loading ? true : false}
+        >
+          Send
+        </button>
+      </div>
     </div>
   );
 };
