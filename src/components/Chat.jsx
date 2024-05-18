@@ -47,14 +47,14 @@ const Chat = () => {
   return (
     <div id="chat-container" className="flex flex-col">
       <div
-        className="no-scrollbar flex h-96 flex-col overflow-scroll rounded-lg border-2 border-black bg-white"
+        className="no-scrollbar flex h-[calc(65svh)] flex-col overflow-scroll rounded-lg border-2 border-black bg-white sm:h-[60svh]"
         id="chat-window"
         ref={chatWindowRef}
       >
         {messages.map((message, index) => {
           return (
             <div
-              className={`m-3 max-w-[50%] rounded-md p-2 ${
+              className={`m-3 rounded-md p-2 text-sm sm:max-w-[50%] sm:text-base ${
                 message.role === "user"
                   ? "self-start bg-blue-300 "
                   : "self-end bg-emerald-400"

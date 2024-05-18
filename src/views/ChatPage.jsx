@@ -20,11 +20,15 @@ const ChatPage = () => {
       whileInView="visible"
       viewport={{ amount: 0.1 }}
       ref={divRef}
-      className="no-scrollbar flex h-full flex-col overflow-x-hidden overflow-y-scroll p-4 sm:max-h-svh sm:min-h-svh sm:p-8"
+      className="no-scrollbar flex h-full snap-start flex-col overflow-x-hidden overflow-y-scroll p-4 sm:max-h-svh sm:min-h-svh sm:p-8"
     >
       <TitleCardH2 title="AI Assistant" />
-      <h2>Have more questions about me?</h2>
-      <h3>Ask a total non-bias chat bot.</h3>
+      <div className="p-2">
+        <h2 className="text-center text-xl font-bold">
+          Have more questions about me?
+        </h2>
+        <h3 className="text-center text-lg">Ask a total non-bias chat bot.</h3>
+      </div>
       <Chat />
     </motion.div>
   );
