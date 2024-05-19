@@ -85,7 +85,6 @@ const Chat = () => {
         <button
           type="submit"
           className="rounded-md border-l-2 border-r-2 border-black bg-emerald-400 px-4 py-2 font-bold"
-          // onClick={() => chatHandler()}
           disabled={loading ? true : false}
         >
           Send
