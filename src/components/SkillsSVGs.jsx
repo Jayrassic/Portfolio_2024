@@ -22,7 +22,7 @@ export const FrontendSkillsSVGs = () => {
       variants={mainVariant}
       initial="hidden"
       whileInView="visible"
-      className="flex w-full flex-wrap justify-evenly gap-2"
+      className="flex w-full flex-wrap justify-evenly gap-2 pt-2"
     >
       <SkillsSVGContainer
         svgSource={javascriptSVG}
@@ -59,7 +59,7 @@ export const BackendSkillsSVGs = () => {
       variants={mainVariant}
       initial="hidden"
       whileInView="visible"
-      className="flex w-full flex-wrap justify-evenly gap-2"
+      className="flex w-full flex-wrap justify-evenly gap-2 pt-2"
     >
       <SkillsSVGContainer
         svgSource={nodeSVG}
