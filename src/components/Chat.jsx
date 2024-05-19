@@ -47,7 +47,7 @@ const Chat = () => {
   return (
     <div id="chat-container" className="flex flex-col">
       <div
-        className="no-scrollbar flex h-[calc(65svh)] flex-col overflow-scroll rounded-lg border-2 border-black bg-white sm:h-[65svh]"
+        className="no-scrollbar flex h-[calc(65svh)] flex-col overflow-scroll rounded-lg border-2 border-black bg-white sm:h-[62svh]"
         id="chat-window"
         ref={chatWindowRef}
       >
