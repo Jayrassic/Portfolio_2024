@@ -23,7 +23,7 @@ const ChatPage = () => {
       className="no-scrollbar flex h-full snap-start flex-col overflow-x-hidden overflow-y-scroll p-4 sm:max-h-svh sm:min-h-svh sm:p-8"
     >
       <TitleCardH2 title="AI Assistant" />
-      <div className="p-2">
+      <div className="px-2 pb-2">
         <h2 className="text-center text-xl font-bold">
           Have more questions about me?
         </h2>

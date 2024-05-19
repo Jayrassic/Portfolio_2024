@@ -47,7 +47,7 @@ const Chat = () => {
   return (
     <div id="chat-container" className="flex flex-col">
       <div
-        className="no-scrollbar flex h-[calc(65svh)] flex-col overflow-scroll rounded-lg border-2 border-black bg-white sm:h-[60svh]"
+        className="no-scrollbar flex h-[calc(65svh)] flex-col overflow-scroll rounded-lg border-2 border-black bg-white sm:h-[65svh]"
         id="chat-window"
         ref={chatWindowRef}
       >
@@ -71,7 +71,7 @@ const Chat = () => {
       </div>
       <form
         onSubmit={(e) => chatHandler(e)}
-        className="my-4 flex rounded-lg border-y-2 border-l-2 border-black bg-white "
+        className="mt-4 flex rounded-lg border-y-2 border-l-2 border-black bg-white "
       >
         <input
           className="flex-grow rounded-lg  p-2"
