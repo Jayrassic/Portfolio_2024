@@ -24,7 +24,7 @@ const Chat = () => {
     setUserQuestion("");
     inputRef.current.value = "";
     try {
-      const aiResponse = await fetch("http://localhost:3000/", {
+      const aiResponse = await fetch("https://ai-hype-man.fly.dev", {
         headers: {
           "Content-Type": "application/json",
         },
