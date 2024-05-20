@@ -84,10 +84,10 @@ const Chat = () => {
         />
         <button
           type="submit"
-          className="rounded-md border-l-2 border-r-2 border-black bg-emerald-400 px-4 py-2 font-bold"
+          className={`w-24 rounded-md border-l-2 border-r-2 border-black bg-emerald-600 px-4 py-2 font-bold duration-200 ease-in enabled:bg-emerald-400 enabled:hover:bg-emerald-500`}
           disabled={loading ? true : false}
         >
-          Send
+          {loading ? "Thinking" : "Send"}
         </button>
       </form>
     </div>
