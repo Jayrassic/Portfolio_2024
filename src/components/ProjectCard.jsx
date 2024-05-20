@@ -28,9 +28,16 @@ const ProjectCard = ({
         <p className="text-lg font-bold">
           {githubLink && siteLink ? "Links:" : "Link:"}
         </p>
-        <a href={siteLink} target="_blank">
-          <img src={websiteSVG} alt="website SVG" />
-        </a>
+        {siteLink !== "#ai" && (
+          <a href={siteLink} target="_blank">
+            <img src={websiteSVG} alt="website SVG" />
+          </a>
+        )}
+        {siteLink === "#ai" && (
+          <a href={siteLink}>
+            <img src={websiteSVG} alt="website SVG" />
+          </a>
+        )}
 
         {githubLink && (
           <a href={githubLink} target="_blank">
