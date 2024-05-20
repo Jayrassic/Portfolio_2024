@@ -78,6 +78,9 @@ const Chat = () => {
           type="text"
           name="question"
           id="question"
+          required={true}
+          minLength={2}
+          maxLength={75}
           placeholder="Ask my AI a question"
           onChange={(e) => setUserQuestion(e.target.value)}
           ref={inputRef}
