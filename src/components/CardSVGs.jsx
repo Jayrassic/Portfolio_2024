@@ -6,6 +6,7 @@ import mongoSVG from "../assets/SVG/mongodb.svg";
 import expressSVG from "../assets/SVG/express.svg";
 import JWTSVG from "../assets/SVG/JWT.svg";
 import nodeSVG from "../assets/SVG/node.svg";
+import openAISVG from "../assets/SVG/openai.svg";
 
 import cssSvg from "../assets/SVG/css-3.svg";
 
@@ -48,9 +49,19 @@ export const AutexTechSVGs = () => {
   return (
     <div className="flex justify-center gap-4">
       <p className="">Tech:</p>
-      <img src={reactSVG} alt="react logo" />
-      <img src={typescriptSVG} alt="typescript logo" />
-      <img src={cssSvg} alt="CSS logo" />
+      <img src={reactSVG} alt="react logo" loading="lazy" />
+      <img src={typescriptSVG} alt="typescript logo" loading="lazy" />
+      <img src={cssSvg} alt="CSS logo" loading="lazy" />
+    </div>
+  );
+};
+
+export const AISVGs = () => {
+  return (
+    <div className="flex justify-center gap-4">
+      <p className="">Tech:</p>
+      <img src={nodeSVG} alt="node logo" loading="lazy" />
+      <img src={openAISVG} alt="open AI logo" loading="lazy" />
     </div>
   );
 };

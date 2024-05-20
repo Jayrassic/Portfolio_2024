@@ -5,6 +5,7 @@ import {
   BBBackTechSVGs,
   BBFrontTechSVGs,
   PalletTechSVGs,
+  AISVGs,
 } from "../components/CardSVGs";
 import { mainVariant, childFromLeftVariant } from "../helpers/viewVariants";
 import { TitleCardH2 } from "../components/Title Card";
@@ -56,6 +57,14 @@ const PersonalProjects = () => {
           SVGComponent={<PalletTechSVGs />}
           siteLink="https://palletcounter.netlify.app/ "
           githubLink="https://github.com/Jayrassic/react_pallet_counter"
+        />
+        <ProjectCard
+          title="AI Hype Man"
+          projectScreenshot="https://res.cloudinary.com/dkqdyagy6/image/upload/q_auto/f_auto/v1712355403/NodeScreenshot_l1ntww.png"
+          description="AI Chatbot that promotes me"
+          SVGComponent={<AISVGs />}
+          siteLink="#ai"
+          githubLink="https://github.com/Jayrassic/AI_Hype_Man"
         />
       </motion.div>
     </motion.div>
