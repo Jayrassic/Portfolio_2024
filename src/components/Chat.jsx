@@ -24,15 +24,23 @@ const Chat = () => {
     setUserQuestion("");
     inputRef.current.value = "";
     try {
-      const aiResponse = await fetch("https://ai-hype-man.fly.dev", {
-        headers: {
-          "Content-Type": "application/json",
+      const aiResponse = await fetch(
+        "http://localhost:3000",
+        // "https://ai-hype-man.fly.dev",
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          method: "POST",
+          mode: "cors",
+          body: JSON.stringify(userMessage),
         },
-        method: "POST",
-        mode: "cors",
-        body: JSON.stringify(userMessage),
-      });
+      );
       const aiMessage = await aiResponse.json();
+      if (aiResponse.status != "ok") {
+        console.log(aiMessage);
+        throw new Error(aiResponse.statusText);
+      }
       setMessages((messages) => [...messages, aiMessage]);
     } catch (err) {
       const errorMessage = {
@@ -70,6 +78,7 @@ const Chat = () => {
         })}
       </div>
       <form
+        autoComplete="off"
         onSubmit={(e) => chatHandler(e)}
         className="mt-4 flex rounded-lg border-y-2 border-l-2 border-black bg-white shadow-[0px_3px_5px_0px_rgb(0,0,0,0.4)]"
       >
