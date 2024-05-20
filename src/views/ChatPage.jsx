@@ -1,5 +1,5 @@
 import { motion, useInView } from "framer-motion";
-import { mainVariant } from "../helpers/viewVariants";
+import { mainVariant, childFromLeftVariant } from "../helpers/viewVariants";
 import { useRef, useEffect } from "react";
 import { TitleCardH2 } from "../components/Title Card";
 import Chat from "../components/Chat";
@@ -23,13 +23,14 @@ const ChatPage = () => {
       className="no-scrollbar flex h-full snap-start flex-col overflow-x-hidden overflow-y-scroll p-4 sm:max-h-svh sm:min-h-svh sm:p-8"
     >
       <TitleCardH2 title="AI Assistant" />
-      <div className="px-2 pb-2">
-        <h2 className="text-center text-xl font-bold">
-          Have more questions about me?
-        </h2>
-        <h3 className="text-center text-lg">Ask a total non-bias chat bot.</h3>
-      </div>
-      <Chat />
+      <motion.div variants={childFromLeftVariant}>
+        <div className="px-2 pb-2 text-center">
+          <h2 className="text-xl font-bold">Have more questions about me?</h2>
+          <h3 className="text-lg">Ask a total non-bias chat bot.</h3>
+          <p className="text-xs">* For Entertainment Purposes Only *</p>
+        </div>
+        <Chat />
+      </motion.div>
     </motion.div>
   );
 };
