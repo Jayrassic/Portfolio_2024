@@ -30,12 +30,12 @@ const Chat = () => {
         },
         method: "POST",
         mode: "cors",
-        body: JSON.stringify(userMessage),
+        body: JSON.stringify({ message: userMessage }),
       });
       const aiMessage = await aiResponse.json();
 
       if (!aiResponse.ok) {
-        throw new Error(aiResponse.statusText);
+        throw new Error(aiMessage.error.message);
       }
       setMessages((messages) => [...messages, aiMessage]);
     } catch (err) {
