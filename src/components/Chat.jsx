@@ -37,8 +37,8 @@ const Chat = () => {
         },
       );
       const aiMessage = await aiResponse.json();
-      if (aiResponse.status != "ok") {
-        console.log(aiMessage);
+
+      if (!aiResponse.ok) {
         throw new Error(aiResponse.statusText);
       }
       setMessages((messages) => [...messages, aiMessage]);
