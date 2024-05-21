@@ -24,18 +24,14 @@ const Chat = () => {
     setUserQuestion("");
     inputRef.current.value = "";
     try {
-      const aiResponse = await fetch(
-        "http://localhost:3000",
-        // "https://ai-hype-man.fly.dev",
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-          method: "POST",
-          mode: "cors",
-          body: JSON.stringify(userMessage),
+      const aiResponse = await fetch("https://ai-hype-man.fly.dev", {
+        headers: {
+          "Content-Type": "application/json",
         },
-      );
+        method: "POST",
+        mode: "cors",
+        body: JSON.stringify(userMessage),
+      });
       const aiMessage = await aiResponse.json();
 
       if (!aiResponse.ok) {
