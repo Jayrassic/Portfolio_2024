@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import resumePDF from "/Jason-Gaglio-Resume.pdf";
+import resumePDF from "/jason_gaglio_resume.pdf";
 import githubSVG from "../assets/SVG/github.svg";
 import emailSVG from "../assets/SVG/email.svg";
 import PropTypes from "prop-types";
