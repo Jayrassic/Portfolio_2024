@@ -15,7 +15,9 @@ const SkillsSVGContainer = ({ svgSource, alt, displayText }) => {
         alt={alt}
         loading="lazy"
       />
-      <p className="text-s font-bold sm:text-base">{displayText}</p>
+      <p className="text-s font-bold text-neutral-700 sm:text-base">
+        {displayText}
+      </p>
     </motion.div>
   );
 };

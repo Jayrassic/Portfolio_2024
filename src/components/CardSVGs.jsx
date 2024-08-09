@@ -13,7 +13,7 @@ import cssSvg from "../assets/SVG/css-3.svg";
 export const BBFrontTechSVGs = () => {
   return (
     <div className="flex justify-center gap-4">
-      <p className="">Tech:</p>
+      <p className="text-neutral-800">Tech:</p>
 
       <img src={reactSVG} alt="react logo" loading="lazy" />
       <img src={bootstrapSVG} alt="bootstrap logo" loading="lazy" />
@@ -25,7 +25,7 @@ export const BBFrontTechSVGs = () => {
 export const BBBackTechSVGs = () => {
   return (
     <div className="flex justify-center gap-4">
-      <p className="">Tech:</p>
+      <p className="text-neutral-800">Tech:</p>
       <img src={expressSVG} alt="express logo" loading="lazy" />
       <img src={mongoSVG} alt="mongodb logo" loading="lazy" />
       <img src={JWTSVG} alt="JWT logo" loading="lazy" />
@@ -37,7 +37,7 @@ export const BBBackTechSVGs = () => {
 export const PalletTechSVGs = () => {
   return (
     <div className="flex justify-center gap-4">
-      <p className="">Tech:</p>
+      <p className="text-neutral-800">Tech:</p>
       <img src={reactSVG} alt="react logo" loading="lazy" />
       <img src={typescriptSVG} alt="typescript logo" loading="lazy" />
       <img src={cssSvg} alt="CSS logo" loading="lazy" />
@@ -48,7 +48,7 @@ export const PalletTechSVGs = () => {
 export const AutexTechSVGs = () => {
   return (
     <div className="flex justify-center gap-4">
-      <p className="">Tech:</p>
+      <p className="text-neutral-800">Tech:</p>
       <img src={reactSVG} alt="react logo" loading="lazy" />
       <img src={typescriptSVG} alt="typescript logo" loading="lazy" />
       <img src={cssSvg} alt="CSS logo" loading="lazy" />
@@ -59,7 +59,7 @@ export const AutexTechSVGs = () => {
 export const AISVGs = () => {
   return (
     <div className="flex justify-center gap-4">
-      <p className="">Tech:</p>
+      <p className="text-neutral-800">Tech:</p>
       <img src={nodeSVG} alt="node logo" loading="lazy" />
       <img src={openAISVG} alt="open AI logo" loading="lazy" />
     </div>

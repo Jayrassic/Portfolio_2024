@@ -25,7 +25,7 @@ const ProjectCard = ({
         <div>{SVGComponent}</div>
       </div>
       <div className="flex items-center justify-center gap-4">
-        <p className="text-lg font-bold">
+        <p className="text-lg font-bold text-neutral-800">
           {githubLink && siteLink ? "Links:" : "Link:"}
         </p>
         {siteLink !== "#ai" && (
