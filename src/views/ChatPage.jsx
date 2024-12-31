@@ -26,7 +26,7 @@ const ChatPage = () => {
       <motion.div variants={childFromLeftVariant}>
         <div className="px-2 pb-2 text-center">
           <h2 className="text-xl font-bold">Have more questions about me?</h2>
-          <h3 className="text-lg">Ask a total non-bias chat bot.</h3>
+          <h3 className="text-lg">Ask a total unbiased chat bot.</h3>
           <p className="text-xs">* For Entertainment Purposes Only *</p>
         </div>
         <Chat />
